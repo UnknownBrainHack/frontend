@@ -1,9 +1,6 @@
 import React from 'react';
+import Items from './items';
 
 export default function Home() {
-  return (
-    <section>
-      <h1>Unknown Brain</h1>
-    </section>
-  );
+  return <Items />;
 }

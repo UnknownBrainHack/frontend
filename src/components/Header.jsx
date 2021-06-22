@@ -9,7 +9,7 @@ import image from '../images/search-icon.svg';
 export default function Header() {
   const router = useRouter();
   const home = router.pathname === '/';
-  const addItems = router.pathname === '/add-items';
+  const addItems = router.pathname === '/items';
   const user = router.pathname === '/user';
   return (
     <header>
@@ -20,7 +20,7 @@ export default function Header() {
       <Link href="/">
         <a className={cx({ active: home })}>Items</a>
       </Link>
-      <Link href="/add-items">
+      <Link href="/items">
         <a className={cx({ active: addItems })}>Add items</a>
       </Link>
       <Link href="/user">
