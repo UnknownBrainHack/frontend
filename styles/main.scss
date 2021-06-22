@@ -1,4 +1,11 @@
 @import './normalize';
 @import './fonts';
 @import './variables';
+@import './components/header';
 @import './components/button';
+
+#__next {
+  max-width: 1620px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
