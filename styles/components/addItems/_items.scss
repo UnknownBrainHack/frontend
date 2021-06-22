@@ -1,0 +1,89 @@
+.items {
+  &__header {
+    position: relative;
+    height: 394px;
+    width: 100%;
+    background: url('../../../src/images/RussianDragon.png') no-repeat center
+      center;
+    background-size: cover;
+    display: flex;
+    margin-bottom: 64px;
+
+    &::before {
+      content: '';
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: linear-gradient(
+        180deg,
+        rgba(34, 193, 195, 0) 0%,
+        rgb(59, 59, 59) 100%
+      );
+    }
+
+    h1 {
+      margin-top: auto;
+      color: white;
+      margin-left: 30px;
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+}
+
+.card-item {
+  background: #ffffff;
+  border: 2px solid #efefef;
+  border-radius: 16px;
+  padding: 16px;
+
+  &__image {
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 16px;
+  }
+
+  &__rating {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__like-btn {
+    background: none;
+    outline: none;
+    border: none;
+    display: flex;
+    font-weight: bold;
+    color: $gray-3;
+    cursor: pointer;
+
+    svg {
+      margin-right: 12px;
+    }
+  }
+
+  h6 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  p {
+    color: $gray-3;
+    font-weight: bold;
+    margin: 0;
+
+    span {
+      color: $deep-blue;
+    }
+  }
+}

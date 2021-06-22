@@ -4,8 +4,50 @@
 @import './mixins';
 @import './components/index';
 
+@import './components/addItems/items';
+
 #__next {
   max-width: 1620px;
   padding: 0 20px;
   margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 72px;
+  margin-bottom: 48px;
+}
+
+h2 {
+  font-size: 64px;
+  margin-bottom: 40px;
+}
+
+h3 {
+  font-size: 48px;
+  margin-bottom: 34px;
+}
+
+h4 {
+  font-size: 36px;
+  margin-bottom: 24px;
+}
+
+h5 {
+  font-size: 24px;
+  margin-bottom: 18px;
+}
+
+h6 {
+  font-size: 18px;
+  margin-bottom: 16px;
 }
