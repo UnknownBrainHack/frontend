@@ -5,6 +5,7 @@ import { useRouter } from 'next/router';
 import cx from 'classnames';
 
 import image from '../images/search-icon.svg';
+import InputField from './ui/InputField';
 
 export default function Header() {
   const router = useRouter();
