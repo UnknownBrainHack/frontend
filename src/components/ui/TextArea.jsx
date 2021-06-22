@@ -1,13 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default function InputField({ title, onChange, value, placeholder }) {
+export default function TextArea({ title, onChange, value, placeholder }) {
   return (
-    <label className="input__field">
-      {title && <span className="input__label">{title}</span>}
-      <input
-        type="text"
-        className="input__input"
+    <label className="textarea__wrapper">
+      {title && <span className="textarea__label">{title}</span>}
+      <textarea
+        className="textarea__input"
         value={value}
         onChange={onChange}
         placeholder={placeholder}
@@ -16,7 +15,7 @@ export default function InputField({ title, onChange, value, placeholder }) {
   );
 }
 
-InputField.propTypes = {
+TextArea.propTypes = {
   title: PropTypes.string,
   value: PropTypes.string,
   placeholder: PropTypes.string,

@@ -1,8 +1,8 @@
 @import './normalize';
 @import './fonts';
 @import './variables';
-@import './components/header';
-@import './components/button';
+@import './mixins';
+@import './components/index';
 
 #__next {
   max-width: 1620px;

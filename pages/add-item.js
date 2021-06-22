@@ -1,2 +1,2 @@
-import AddItems from '../src/pages/AddItem';
-export default AddItems;
+import AddItem from '../src/pages/AddItem';
+export default AddItem;

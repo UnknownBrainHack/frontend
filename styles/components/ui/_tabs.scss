@@ -1,0 +1,16 @@
+.tabs__wrapper {
+  display: block;
+  .tabs__header{
+    display: flex;
+    align-items: flex-start;
+    .tabs__header-button{
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 29px;
+      padding: 6px 12px;
+      background-color: $WHITE;
+      border: unset;
+      cursor: pointer;
+    }
+  }
+}

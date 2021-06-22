@@ -1,10 +1,11 @@
-.input__field{
+.textarea__wrapper{
   display: flex;
   flex-direction: column;
-  .input__label{
+  .textarea__label{
     @include LabelStyle();
   }
-  .input__input{
+  .textarea__input{
     @include InputStyle();
+    height: auto;
   }
 }
