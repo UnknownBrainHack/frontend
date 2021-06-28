@@ -23,6 +23,9 @@
     justify-content: center;
     flex-direction: column;
     text-align: center;
+    img{
+      object-fit: cover;
+    }
   }
 
   &__input {
