@@ -16,7 +16,7 @@ export default function CardItem({
 }) {
   return (
     <motion.div variants={variants} className="card-item">
-      <Link className="card-item__image" href="/">
+      <Link className="card-item__image" href="/item">
         <Image src={src || Background} alt={alt} />
       </Link>
       <h6>{title}</h6>

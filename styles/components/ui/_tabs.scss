@@ -1,5 +1,5 @@
 .tabs {
-  &__header{
+  &__header {
     display: flex;
     align-items: flex-start;
     &-button {
@@ -10,6 +10,17 @@
       background-color: $WHITE;
       border: unset;
       cursor: pointer;
+      border-bottom: 2px solid transparent;
+      &.active {
+        color: $deep-blue;
+        border-bottom: 2px solid $deep-blue;
+      }
     }
+  }
+
+  &__items {
+    padding: 20px 0 0 0;
+    height: 300px;
+    overflow: hidden auto;
   }
 }
