@@ -1,9 +1,8 @@
-.tabs__wrapper {
-  display: block;
-  .tabs__header{
+.tabs {
+  &__header{
     display: flex;
     align-items: flex-start;
-    .tabs__header-button{
+    &-button {
       font-weight: 500;
       font-size: 24px;
       line-height: 29px;

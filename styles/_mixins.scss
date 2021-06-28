@@ -1,4 +1,4 @@
-@mixin FocusState(){
+@mixin FocusState() {
   box-shadow: 0 0 2px 1px $blue;
   outline: 0;
 }
@@ -9,7 +9,7 @@
   color: $GRAY;
   margin-bottom: 12px;
   display: inline-block;
-};
+}
 
 @mixin InputStyle() {
   height: 46px;
@@ -24,4 +24,16 @@
   &::placeholder {
     color: $gray-3;
   }
-};
+}
+
+@mixin tablet-size {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin phone-size {
+  @media screen and (max-width: 480px) {
+    @content;
+  }
+}

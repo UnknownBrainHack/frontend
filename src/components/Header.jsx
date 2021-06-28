@@ -5,12 +5,11 @@ import { useRouter } from 'next/router';
 import cx from 'classnames';
 
 import image from '../images/search-icon.svg';
-import InputField from './ui/InputField';
 
 export default function Header() {
   const router = useRouter();
   const home = router.pathname === '/';
-  const addItems = router.pathname === '/items';
+  const addItems = router.pathname === '/add-items';
   const user = router.pathname === '/user';
   return (
     <header>
@@ -21,7 +20,7 @@ export default function Header() {
       <Link href="/">
         <a className={cx({ active: home })}>Items</a>
       </Link>
-      <Link href="/items">
+      <Link href="/add-items">
         <a className={cx({ active: addItems })}>Add items</a>
       </Link>
       <Link href="/user">

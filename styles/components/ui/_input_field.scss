@@ -1,10 +1,13 @@
-.input__field{
-  display: flex;
-  flex-direction: column;
-  .input__label{
+.input {
+  &__field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  &__label {
     @include LabelStyle();
   }
-  .input__input{
+  &__input {
     @include InputStyle();
   }
 }

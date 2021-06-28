@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 export default function TextArea({ title, onChange, value, placeholder }) {
   return (
-    <label className="textarea__wrapper">
+    <label className="textarea__field">
       {title && <span className="textarea__label">{title}</span>}
       <textarea
         className="textarea__input"

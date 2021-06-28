@@ -1,21 +1,22 @@
 import React from 'react';
 import InputField from '../components/ui/InputField';
-import TextArea from "../components/ui/TextArea";
-import Button from "../components/ui/Button";
-import Tabs from "../components/ui/Tabs";
+import TextArea from '../components/ui/TextArea';
+import Button from '../components/ui/Button';
+import Droparea from '../components/ui/Droparea';
 
 export default function AddItem() {
   return (
-    <div>
-      <InputField title="Input Item Name" />
-      <TextArea title="Something" />
-      <Button>Принять</Button>
-      <Button secondary>Отменить</Button>
-      <Tabs>
-        <span title="прривет1">1</span>
-        <div title="прривет2">2</div>
-        <div title="прривет3">3</div>
-      </Tabs>
-    </div>
+    <section className="section__container">
+      <section>
+        <Droparea />
+      </section>
+      <section>
+        <InputField title="Input Item Name" />
+        <TextArea title="Something" />
+        <InputField title="Input Start Price" />
+        <Button>Publish item</Button>
+        <Button secondary>Save draft</Button>
+      </section>
+    </section>
   );
 }

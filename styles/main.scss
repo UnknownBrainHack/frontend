@@ -7,7 +7,7 @@
 @import './components/addItems/items';
 
 #__next {
-  max-width: 1620px;
+  max-width: 1650px;
   padding: 0 20px;
   margin: 0 auto;
 }
@@ -25,6 +25,11 @@ h6 {
 h1 {
   font-size: 72px;
   margin-bottom: 48px;
+
+  @include phone-size {
+    font-size: 48px;
+    margin-bottom: 34px;
+  }
 }
 
 h2 {
@@ -35,6 +40,11 @@ h2 {
 h3 {
   font-size: 48px;
   margin-bottom: 34px;
+
+  @include phone-size {
+    font-size: 24px;
+    margin-bottom: 18px;
+  }
 }
 
 h4 {
@@ -50,4 +60,40 @@ h5 {
 h6 {
   font-size: 18px;
   margin-bottom: 16px;
+}
+
+.section__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 35px;
+
+  @include phone-size {
+    display: block;
+  }
+
+  & > section:nth-of-type(2) {
+    border-left: 4px solid $LIGHT_GRAY;
+    padding-left: 16px;
+
+    @include phone-size {
+      padding-left: 0;
+      border: none;
+      margin-top: 24px;
+    }
+  }
+
+  button {
+    width: calc(50% - 20px);
+    &:first-of-type {
+      margin-right: 40px;
+    }
+
+    @include phone-size {
+      width: 100%;
+
+      &:first-of-type {
+        margin: 0 0 20px 0;
+      }
+    }
+  }
 }

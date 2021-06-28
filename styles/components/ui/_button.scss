@@ -18,7 +18,7 @@
   }
 
   &:active {
-    transform: translateY(4px);
+    transform: scale(0.99) translateY(3px);
   }
 
   &:focus {

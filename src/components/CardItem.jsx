@@ -1,15 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Image from 'next/image';
+import Link from 'next/link';
 
 import Background from '../images/RussianDragon.png';
 
 export default function CardItem({ title, rate, likes, src, alt = '' }) {
   return (
     <div className="card-item">
-      <div className="card-item__image">
+      <Link className="card-item__image" href="/">
         <Image src={src || Background} alt={alt} />
-      </div>
+      </Link>
       <h6>{title}</h6>
       <div className="card-item__rating">
         <p>
