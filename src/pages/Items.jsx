@@ -13,9 +13,9 @@ export default function Items() {
   ];
   return (
     <motion.div
-      initial={{ opacity: 0, x: 200 }}
-      animate={{ opacity: 1, x: 0 }}
-      exit={{ opacity: 0, x: -200 }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
       transition={{ duration: 0.2 }}
     >
       <section>
@@ -61,7 +61,11 @@ export default function Items() {
           animate="show"
           exit="hidden"
           variants={{
-            hidden: {},
+            hidden: {
+              transition: {
+                staggerChildren: 0.1,
+              },
+            },
             show: {
               transition: {
                 staggerChildren: 0.1,
