@@ -48,6 +48,7 @@
   border: 2px solid #efefef;
   border-radius: 16px;
   padding: 16px;
+  transition: 0.2s ease-out;
 
   &__image {
     border-radius: 16px;
@@ -89,5 +90,10 @@
     span {
       color: $deep-blue;
     }
+  }
+
+  &:hover{
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    cursor: pointer;
   }
 }

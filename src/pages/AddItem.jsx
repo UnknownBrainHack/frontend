@@ -3,10 +3,17 @@ import InputField from '../components/ui/InputField';
 import TextArea from '../components/ui/TextArea';
 import Button from '../components/ui/Button';
 import Droparea from '../components/ui/Droparea';
+import { motion } from 'framer-motion';
 
 export default function AddItem() {
   return (
-    <section className="section__container">
+    <motion.section
+      className="section__container"
+      initial={{ opacity: 0, x: 200 }}
+      animate={{ opacity: 1, x: 0 }}
+      exit={{ opacity: 0, x: -200 }}
+      transition={{ duration: 0.2 }}
+    >
       <section>
         <Droparea />
       </section>
@@ -17,6 +24,6 @@ export default function AddItem() {
         <Button>Publish item</Button>
         <Button secondary>Save draft</Button>
       </section>
-    </section>
+    </motion.section>
   );
 }

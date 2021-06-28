@@ -2,12 +2,20 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Image from 'next/image';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 import Background from '../images/RussianDragon.png';
 
-export default function CardItem({ title, rate, likes, src, alt = '' }) {
+export default function CardItem({
+  title,
+  rate,
+  likes,
+  src,
+  alt = '',
+  variants,
+}) {
   return (
-    <div className="card-item">
+    <motion.div variants={variants} className="card-item">
       <Link className="card-item__image" href="/">
         <Image src={src || Background} alt={alt} />
       </Link>
@@ -34,7 +42,7 @@ export default function CardItem({ title, rate, likes, src, alt = '' }) {
           <span>{likes}</span>
         </button>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
@@ -44,4 +52,5 @@ CardItem.propTypes = {
   likes: PropTypes.number,
   src: PropTypes.string,
   alt: PropTypes.string,
+  variants: PropTypes.object,
 };

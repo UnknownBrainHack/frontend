@@ -1,17 +1,16 @@
 /* eslint-disable react/react-in-jsx-scope */
 /* eslint-disable react/prop-types */
 import '../styles/main.scss';
+import { AnimatePresence } from 'framer-motion';
+import Layout from '../src/components/common/Layout';
 
-import Header from '../src/components/Header';
-
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps, router }) {
   return (
-    <>
-      <Header />
-      <main>
-        <Component {...pageProps} />
-      </main>
-    </>
+    <Layout>
+      <AnimatePresence exitBeforeEnter>
+        <Component {...pageProps} key={router.route} />
+      </AnimatePresence>
+    </Layout>
   );
 }
 
