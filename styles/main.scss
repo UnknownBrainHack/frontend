@@ -67,7 +67,6 @@ h6 {
   }
 
   & > section:nth-of-type(2) {
-    border-left: 4px solid $LIGHT_GRAY;
     padding-left: 16px;
 
     @include phone-size {

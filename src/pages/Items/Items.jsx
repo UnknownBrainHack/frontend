@@ -2,6 +2,8 @@ import React from 'react';
 import ProductCard from '../../components/common/ProductCard/ProductCard';
 import { motion } from 'framer-motion';
 import * as S from './styled';
+import Banner from './components/Banner/Banner';
+import ProductList from '../../components/common/ProductList/ProductList';
 
 export default function Items() {
   const cards = [
@@ -19,11 +21,7 @@ export default function Items() {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.2 }}
     >
-      <section>
-        <div className="items__header">
-          <h1>Unknown Brain</h1>
-        </div>
-      </section>
+      <Banner />
       <section>
         <S.SubTitle>Experts rated today</S.SubTitle>
         <motion.div
@@ -59,45 +57,7 @@ export default function Items() {
       </section>
       <section>
         <S.SubTitle>Explore</S.SubTitle>
-        <div
-          className="items__grid"
-          initial="hidden"
-          animate="show"
-          exit="hidden"
-          variants={{
-            hidden: {
-              transition: {
-                staggerChildren: 0.1,
-              },
-            },
-            show: {
-              transition: {
-                staggerChildren: 0.1,
-              },
-            },
-          }}
-        >
-          {cards.map((card) => (
-            <motion.div
-              variants={{
-                hidden: { scale: 0.9, opacity: 0 },
-                show: { scale: 1, opacity: 1 },
-              }}
-              key={card.title}
-            >
-              <ProductCard
-                variants={{
-                  hidden: { scale: 1, opacity: 0 },
-                  show: { scale: 1, opacity: 1 },
-                }}
-                key={card.title}
-                title={card.title}
-                likes={card.likes}
-                rate={card.rate}
-              />
-            </motion.div>
-          ))}
-        </div>
+        <ProductList cards={cards} />
       </section>
     </motion.div>
   );

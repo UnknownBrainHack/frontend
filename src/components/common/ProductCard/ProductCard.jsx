@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Image from 'next/image';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
 import * as S from './styled';
 import Background from '../../../images/RussianDragon.png';
 

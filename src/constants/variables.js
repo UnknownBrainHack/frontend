@@ -22,9 +22,9 @@ export const rgba = (hex, alpha) => {
 
 export const LIGHT_GRAY = '#EFEFEF';
 export const VIOLET = '#9200ff';
-export const DEEP_BLUE = '#0166ff';
+export const BLUE = '#0166FF';
+export const DARK_BLUE = '#00359a';
 export const LIGHT_BLUE = '#d8e7fe';
-export const BLUE = '#71aaff';
 export const GRAY_3 = '#828282';
 export const GRAY = '#A4A3A3';
 export const WHITE = '#FFFFFF';

@@ -3,14 +3,16 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
+    flex-grow: 1;
   }
   &__label {
     @include LabelStyle();
   }
   &__input {
     @include InputStyle();
-    min-height: 370px;
+    min-height: 100px;
     height: auto;
     resize: vertical;
+    flex-grow: 1;
   }
 }

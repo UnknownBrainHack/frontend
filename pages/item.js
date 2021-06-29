@@ -1,2 +1,2 @@
-import Item from '../src/pages/Item';
+import Item from '../src/pages/ProductPage/Item';
 export default Item;
