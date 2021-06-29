@@ -1,10 +1,11 @@
-import Header from '../Header';
+import Header from '../Header/Header';
+import * as S from './styled';
 
 function Layout({ children }) {
   return (
     <>
       <Header />
-      <main>{children}</main>
+      <S.Main>{children}</S.Main>
     </>
   );
 }

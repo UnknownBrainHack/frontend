@@ -1,4 +1,5 @@
 .items {
+
   &__header {
     position: relative;
     height: 394px;
@@ -7,8 +8,6 @@
       center;
     background-size: cover;
     display: flex;
-    margin-bottom: 64px;
-
     &::before {
       content: '';
       height: 100%;
@@ -48,9 +47,8 @@
   border: 2px solid #efefef;
   border-radius: 16px;
   padding: 16px;
-  transition: 0.2s ease-out;
 
-  &__image {
+    &__image {
     border-radius: 16px;
     overflow: hidden;
     margin-bottom: 16px;

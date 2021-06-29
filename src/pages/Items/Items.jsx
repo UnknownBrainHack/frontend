@@ -1,6 +1,7 @@
 import React from 'react';
-import CardItem from '../components/CardItem';
+import ProductCard from '../../components/common/ProductCard/ProductCard';
 import { motion } from 'framer-motion';
+import * as S from './styled';
 
 export default function Items() {
   const cards = [
@@ -24,7 +25,7 @@ export default function Items() {
         </div>
       </section>
       <section>
-        <h3>Experts rated today</h3>
+        <S.SubTitle>Experts rated today</S.SubTitle>
         <motion.div
           className="items__grid"
           initial="hidden"
@@ -40,21 +41,24 @@ export default function Items() {
           }}
         >
           {cards.map((card) => (
-            <CardItem
+            <motion.div
               variants={{
                 hidden: { scale: 0.9, opacity: 0 },
                 show: { scale: 1, opacity: 1 },
               }}
               key={card.title}
-              title={card.title}
-              likes={card.likes}
-              rate={card.rate}
-            />
+            >
+              <ProductCard
+                title={card.title}
+                likes={card.likes}
+                rate={card.rate}
+              />
+            </motion.div>
           ))}
         </motion.div>
       </section>
       <section>
-        <h3>Explore</h3>
+        <S.SubTitle>Explore</S.SubTitle>
         <div
           className="items__grid"
           initial="hidden"
@@ -74,16 +78,24 @@ export default function Items() {
           }}
         >
           {cards.map((card) => (
-            <CardItem
+            <motion.div
               variants={{
-                hidden: { scale: 1, opacity: 0 },
+                hidden: { scale: 0.9, opacity: 0 },
                 show: { scale: 1, opacity: 1 },
               }}
               key={card.title}
-              title={card.title}
-              likes={card.likes}
-              rate={card.rate}
-            />
+            >
+              <ProductCard
+                variants={{
+                  hidden: { scale: 1, opacity: 0 },
+                  show: { scale: 1, opacity: 1 },
+                }}
+                key={card.title}
+                title={card.title}
+                likes={card.likes}
+                rate={card.rate}
+              />
+            </motion.div>
           ))}
         </div>
       </section>

@@ -3,26 +3,19 @@ import PropTypes from 'prop-types';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import * as S from './styled';
+import Background from '../../../images/RussianDragon.png';
 
-import Background from '../images/RussianDragon.png';
-
-export default function CardItem({
-  title,
-  rate,
-  likes,
-  src,
-  alt = '',
-  variants,
-}) {
+export default function ProductCard({ title, rate, likes, src, alt = '' }) {
   return (
-    <motion.div variants={variants} className="card-item">
+    <S.Card className="card-item">
       <Link className="card-item__image" href="/item">
         <Image src={src || Background} alt={alt} />
       </Link>
-      <h6>{title}</h6>
+      <S.Title>{title}</S.Title>
       <div className="card-item__rating">
         <p>
-          Expert rate: <span>{rate}</span>
+          Expert rate: <span>{rate}&nbsp;ETH</span>
         </p>
         <button type="button" className="card-item__like-btn">
           <svg
@@ -42,11 +35,11 @@ export default function CardItem({
           <span>{likes}</span>
         </button>
       </div>
-    </motion.div>
+    </S.Card>
   );
 }
 
-CardItem.propTypes = {
+ProductCard.propTypes = {
   title: PropTypes.string,
   rate: PropTypes.number,
   likes: PropTypes.number,

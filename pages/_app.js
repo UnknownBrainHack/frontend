@@ -1,8 +1,6 @@
-/* eslint-disable react/react-in-jsx-scope */
-/* eslint-disable react/prop-types */
 import '../styles/main.scss';
 import { AnimatePresence, AnimateSharedLayout } from 'framer-motion';
-import Layout from '../src/components/common/Layout';
+import Layout from '../src/components/common/Layout/Layout';
 
 function MyApp({ Component, pageProps, router }) {
   return (
