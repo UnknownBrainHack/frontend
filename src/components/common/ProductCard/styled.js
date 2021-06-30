@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import {
+  GRAY_3,
+  LIGHT_GRAY,
   SHADOW_BIG,
   SHADOW_SMALL,
   TRANSITION,
@@ -9,17 +11,29 @@ import {
 export const Title = styled.h6`
   margin-top: 16px;
 `;
+export const LikeButton = styled.button`
+  background: none;
+  outline: none;
+  border: none;
+  display: flex;
+  font-weight: bold;
+  color: ${GRAY_3};
+  cursor: pointer;
+  svg {
+    margin-right: 6px;
+  }
+`;
 export const Card = styled.div`
   background: #ffffff;
-  border: 2px solid #efefef;
+  //border: 4px solid #efefef;
   border-radius: 16px;
   padding: 16px;
-  transition: 0.2s ease-out;
   transition: ${TRANSITION};
+  position: relative;
+  box-shadow: 0 0 0 transparent, 0 0 0 2px ${LIGHT_GRAY};
   &:hover {
-    border: 2px solid ${VIOLET};
     transform: scale(1.025);
-    box-shadow: ${SHADOW_BIG()};
+    box-shadow: ${SHADOW_BIG()}, 0 0 0 4px ${VIOLET};
   }
   &:active {
     transform: scale(0.95);

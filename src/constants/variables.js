@@ -24,6 +24,7 @@ export const LIGHT_GRAY = '#EFEFEF';
 export const VIOLET = '#9200ff';
 export const BLUE = '#0166FF';
 export const DARK_BLUE = '#00359a';
+export const BLACK = '#000000';
 export const LIGHT_BLUE = '#d8e7fe';
 export const GRAY_3 = '#828282';
 export const GRAY = '#A4A3A3';

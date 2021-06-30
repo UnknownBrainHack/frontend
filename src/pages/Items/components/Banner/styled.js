@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { DARK_BLUE, rgba } from '../../../../constants/variables';
+import { BLACK, rgba } from '../../../../constants/variables';
 export const BannerConent = styled.div`
   position: relative;
   height: 394px;
@@ -17,8 +17,9 @@ export const BannerConent = styled.div`
     left: 0;
     background: linear-gradient(
       180deg,
-      ${rgba(DARK_BLUE, 0)} 35%,
-      ${rgba(DARK_BLUE, 0.5)} 100%
+      ${rgba(BLACK, 0)} 0%,
+      ${rgba(BLACK, 0.25)} 60%,
+      ${rgba(BLACK, 0.5)} 100%
     );
   }
 

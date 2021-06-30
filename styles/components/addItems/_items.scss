@@ -13,10 +13,7 @@
 }
 
 .card-item {
-  background: #ffffff;
-  border: 2px solid #efefef;
-  border-radius: 16px;
-  padding: 16px;
+
 
     &__image {
     border-radius: 16px;
@@ -31,17 +28,7 @@
   }
 
   &__like-btn {
-    background: none;
-    outline: none;
-    border: none;
-    display: flex;
-    font-weight: bold;
-    color: $gray-3;
-    cursor: pointer;
 
-    svg {
-      margin-right: 12px;
-    }
   }
 
   h6 {

@@ -16,7 +16,7 @@ export default function ProductCard({ title, rate, likes, src, alt = '' }) {
         <p>
           Expert rate: <span>{rate}&nbsp;ETH</span>
         </p>
-        <button type="button" className="card-item__like-btn">
+        <S.LikeButton type="button" className="card-item__like-btn">
           <svg
             width="17"
             height="16"
@@ -32,7 +32,7 @@ export default function ProductCard({ title, rate, likes, src, alt = '' }) {
             />
           </svg>{' '}
           <span>{likes}</span>
-        </button>
+        </S.LikeButton>
       </div>
     </S.Card>
   );
