@@ -21,13 +21,13 @@ export default function Tabs({ children }) {
         ))}
       </div>
       {items.map((item, i) => (
-        <>
+        <div key={i}>
           {selected === i && (
-            <div className="tabs__items" key={i}>
+            <div className="tabs__items">
               {item}
             </div>
           )}
-        </>
+        </div>
       ))}
     </div>
   );
