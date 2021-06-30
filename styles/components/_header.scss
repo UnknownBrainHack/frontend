@@ -1,6 +1,6 @@
 header {
   @include phone-size {
-    display: none;
+    display: none !important;
   }
 
   & * {

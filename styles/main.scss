@@ -58,6 +58,7 @@ h6 {
 }
 
 .section__container {
+  margin-top: 48px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 35px;
@@ -73,21 +74,6 @@ h6 {
       padding-left: 0;
       border: none;
       margin-top: 24px;
-    }
-  }
-
-  button {
-    width: calc(50% - 20px);
-    &:first-of-type {
-      margin-right: 40px;
-    }
-
-    @include phone-size {
-      width: 100%;
-
-      &:first-of-type {
-        margin: 0 0 20px 0;
-      }
     }
   }
 }

@@ -20,6 +20,8 @@ export const rgba = (hex, alpha) => {
   return `rgba(${color.r}, ${color.g}, ${color.b}, ${alpha})`;
 };
 
+export const mobile = "@media screen and (max-width: 480px)"
+
 export const LIGHT_GRAY = '#EFEFEF';
 export const VIOLET = '#9200ff';
 export const BLUE = '#0166FF';
