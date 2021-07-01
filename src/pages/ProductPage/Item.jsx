@@ -8,6 +8,7 @@ import Button from '../../components/ui/Button';
 import * as S from './styled';
 import { SubTitle } from '../Items/styled';
 import ProductList from '../../components/common/ProductList/ProductList';
+import { LeftSection, RightSection } from '../AddItem/styled';
 
 export default function Item() {
   const cards = [
@@ -26,10 +27,10 @@ export default function Item() {
         exit={{ opacity: 0, y: 200 }}
         transition={{ duration: 0.2 }}
       >
-        <section>
+        <LeftSection>
           <Droparea disabled image={Dragon} />
-        </section>
-        <section className="section__creator">
+        </LeftSection>
+        <RightSection>
           <h4>Hey there</h4>
           <div className="creator__container">
             <p>Creator</p>
@@ -105,9 +106,11 @@ export default function Item() {
               </div>
             </div>
           </Tabs>
-          <Button>Buy for 2.525 ETH</Button>
-          <Button secondary>Rate item</Button>
-        </section>
+          <S.ActionButton className="creator__user" style={{ marginTop: 'auto' }}>
+            <Button>Buy for 2.525 ETH</Button>
+            <Button secondary>Rate item</Button>
+          </S.ActionButton>
+        </RightSection>
       </motion.section>
       <S.InfoBlock>
         <SubTitle>About Item</SubTitle>

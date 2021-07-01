@@ -26,7 +26,8 @@ export const LikeButton = styled.button`
 export const Card = styled.div`
   background: #ffffff;
   border-radius: 16px;
-  padding: 16px;
+  padding: 16px 16px 20px;
+  transition: 0.2s ease-out;
   transition: ${TRANSITION};
   position: relative;
   box-shadow: 0 0 0 transparent, 0 0 0 2px ${LIGHT_GRAY};

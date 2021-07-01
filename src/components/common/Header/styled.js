@@ -3,7 +3,7 @@ import { LIGHT_GRAY } from '../../../constants/variables';
 
 export const Header = styled.header`
   height: 100px;
-  margin: 0 auto 48px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   padding: 25px 0;

@@ -8,4 +8,7 @@ export const RightSection = styled.section`
   display: flex;
   flex-direction: column;
   border-left: 2px solid ${LIGHT_GRAY};
+  h4 {
+    margin-bottom: 48px;
+  }
 `;
