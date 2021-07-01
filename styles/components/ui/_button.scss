@@ -7,6 +7,7 @@
   font-weight: bold;
   cursor: pointer;
   transition: $transition;
+  white-space: nowrap;
 
   &.secondary {
     background: $light-blue;
