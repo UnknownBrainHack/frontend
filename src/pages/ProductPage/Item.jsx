@@ -106,7 +106,10 @@ export default function Item() {
               </div>
             </div>
           </Tabs>
-          <S.ActionButton className="creator__user" style={{ marginTop: 'auto' }}>
+          <S.ActionButton
+            className="creator__user"
+            style={{ marginTop: 'auto' }}
+          >
             <Button>Buy for 2.525 ETH</Button>
             <Button secondary>Rate item</Button>
           </S.ActionButton>
@@ -126,7 +129,7 @@ export default function Item() {
           to escape on the wreckage of the mast.
         </S.Description>
         <SubTitle>Items For You</SubTitle>
-        <ProductList cards={cards}></ProductList>
+        <ProductList cards={cards} slider></ProductList>
       </S.InfoBlock>
     </>
   );

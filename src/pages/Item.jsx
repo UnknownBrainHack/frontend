@@ -1,6 +1,5 @@
 import React from 'react';
 import Image from 'next/image';
-
 import Droparea from '../components/ui/Droparea';
 import Dragon from '../images/RussianDragon.png';
 import Tabs from '../components/ui/Tabs';

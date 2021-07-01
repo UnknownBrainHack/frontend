@@ -1,8 +1,25 @@
 import * as S from './styled';
 import { motion } from 'framer-motion';
 import ProductCard from '../ProductCard/ProductCard';
+import Slider from '../Slider/Slider';
 
-function ProductList({ cards }) {
+function ProductList({ cards, slider }) {
+  if (slider) {
+    return (
+      <S.StyledProductList>
+        <Slider {...slider}>
+          {cards.map((card) => (
+            <ProductCard
+              key={card.title}
+              title={card.title}
+              likes={card.likes}
+              rate={card.rate}
+            />
+          ))}
+        </Slider>
+      </S.StyledProductList>
+    );
+  }
   return (
     <S.StyledProductList>
       <div
