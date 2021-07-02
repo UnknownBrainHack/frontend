@@ -14,8 +14,11 @@ export default function Item() {
   const cards = [
     { title: 'Hey there', rate: 0.34, likes: 121 },
     { title: 'Hello, mate', rate: 0.11, likes: 41 },
-    { title: 'Hi, friend', rate: 0.77, likes: 328 },
     { title: 'Good afternoon, pal', rate: 1.15, likes: 141 },
+    { title: 'Hi, friend', rate: 0.77, likes: 328 },
+    { title: 'Hello, mate', rate: 0.11, likes: 41 },
+    { title: 'Aye-aye', rate: 0.54, likes: 451 },
+    { title: 'Hi, friend', rate: 0.77, likes: 328 },
     { title: 'Aye-aye', rate: 0.54, likes: 451 },
   ];
   return (

@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { LIGHT_GRAY } from '../../constants/variables';
 export const ButtonsWrapper = styled.div`
   display: flex;
+  gap: 20px;
 `;
 export const LeftSection = styled.section``;
 export const RightSection = styled.section`
