@@ -10,11 +10,10 @@ export const ActionButton = styled.div`
   }
   ${mobile} {
     justify-content: center;
-    /* flex-wrap: wrap; */
     button {
       height: auto;
       padding: 14px;
-      margin: 0px;
+      margin: 0;
     }
   }
 `;
@@ -22,7 +21,7 @@ export const Description = styled.p`
   max-width: 940px;
   margin-bottom: 30px;
   &:last-of-type {
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
 `;
 export const InfoBlock = styled.div``;
