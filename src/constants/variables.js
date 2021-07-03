@@ -22,6 +22,12 @@ export const rgba = (hex, alpha) => {
 
 export const mobile = '@media screen and (max-width: 480px)';
 
+export const CONTAINER_DESKTOP = '1280px';
+export const LAYOUT_PADDING = '20px';
+export const LAYOUT_WIDTH = (col) => {
+  return `calc(${(col / 5) * 100}% - ${(col - 1) * 20}px)`;
+};
+
 export const LIGHT_GRAY = '#EFEFEF';
 export const VIOLET = '#9200ff';
 export const BLUE = '#0166FF';

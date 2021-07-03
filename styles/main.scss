@@ -58,6 +58,11 @@ h6 {
   margin-bottom: 16px;
 }
 
+body{
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
 .section__container {
   margin-top: 48px;
   display: grid;
