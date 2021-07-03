@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import Droparea from '../../components/ui/Droparea';
@@ -9,8 +9,10 @@ import * as S from './styled';
 import { SubTitle } from '../Items/styled';
 import ProductList from '../../components/common/ProductList/ProductList';
 import { LeftSection, RightSection } from '../AddItem/styled';
+import Modal from '../../components/ui/Modal/Modal';
 
 export default function Item() {
+  const [open, setOpen] = useState(false);
   const cards = [
     { title: 'Hey there', rate: 0.34, likes: 121 },
     { title: 'Hello, mate', rate: 0.11, likes: 41 },
@@ -114,7 +116,12 @@ export default function Item() {
             style={{ marginTop: 'auto' }}
           >
             <Button>Buy for 2.525 ETH</Button>
-            <Button secondary>Rate item</Button>
+            <Button secondary onClick={() => setOpen(true)}>
+              Rate item
+            </Button>
+            <Modal open={open} title="Rate Item" onClose={() => setOpen(false)}>
+              Wassup
+            </Modal>
           </S.ActionButton>
         </RightSection>
       </motion.section>

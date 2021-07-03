@@ -10,7 +10,7 @@ function Slider({ children }) {
 
   return (
     <SwiperWrapper>
-      <Swiper spaceBetween={20} slidesPerView={5}>
+      <Swiper spaceBetween={20} slidesPerView="auto">
         {slides?.map((slide, index) => (
           <SwiperSlide key={index}>{slide}</SwiperSlide>
         ))}
