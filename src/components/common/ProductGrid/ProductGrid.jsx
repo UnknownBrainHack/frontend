@@ -38,6 +38,7 @@ function ProductGrid({ cards }) {
             title={card.title}
             likes={card.likes}
             rate={card.rate}
+            src={card.src}
           />
         </motion.div>
       ))}

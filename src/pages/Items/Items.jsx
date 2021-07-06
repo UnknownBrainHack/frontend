@@ -8,14 +8,6 @@ import ProductGrid from '../../components/common/ProductGrid/ProductGrid';
 
 function Items({ products }) {
   console.log('products', products);
-  const cards = [
-    { title: 'Hey there', rate: 0.34, likes: 121 },
-    { title: 'Hello, mate', rate: 0.11, likes: 41 },
-    { title: 'Hi, friend', rate: 0.77, likes: 328 },
-    { title: 'Good afternoon, pal', rate: 1.15, likes: 141 },
-    { title: 'Aye-aye', rate: 0.54, likes: 451 },
-    { title: 'Sup, g', rate: 0.18, likes: 46 },
-  ];
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -27,11 +19,11 @@ function Items({ products }) {
       <Container>
         <section>
           <S.SubTitle>Experts rated today</S.SubTitle>
-          <ProductGrid cards={cards} />
+          <ProductGrid cards={products} />
         </section>
         <section>
           <S.SubTitle>Explore</S.SubTitle>
-          <ProductList slider={{ overflow: true }} cards={cards} />
+          <ProductList slider={{ overflow: true }} cards={products} />
         </section>
       </Container>
     </motion.div>

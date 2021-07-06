@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { LIGHT_GRAY, mobile, tablet } from '../../constants/variables';
+import { LIGHT_GRAY, tablet } from '../../constants/variables';
 import { motion } from 'framer-motion';
 import { Container } from '../../components/ui/styled';
 export const ButtonsWrapper = styled.div`

@@ -14,6 +14,7 @@ function ProductList({ cards, slider }) {
               title={card.title}
               likes={card.likes}
               rate={card.rate}
+              src={card.src}
             />
           ))}
         </Slider>
@@ -57,6 +58,7 @@ function ProductList({ cards, slider }) {
               title={card.title}
               likes={card.likes}
               rate={card.rate}
+              src={card.src}
             />
           </motion.div>
         ))}

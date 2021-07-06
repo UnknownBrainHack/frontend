@@ -17,18 +17,8 @@ import {
 import { Container } from '../../components/ui/styled';
 import InputField from '../../components/ui/InputField/InputField';
 
-export default function Item() {
+function Item({ products }) {
   const [open, setOpen] = useState(false);
-  const cards = [
-    { title: 'Hey there', rate: 0.34, likes: 121 },
-    { title: 'Hello, mate', rate: 0.11, likes: 41 },
-    { title: 'Good afternoon, pal', rate: 1.15, likes: 141 },
-    { title: 'Hi, friend', rate: 0.77, likes: 328 },
-    { title: 'Hello, mate', rate: 0.11, likes: 41 },
-    { title: 'Aye-aye', rate: 0.54, likes: 451 },
-    { title: 'Hi, friend', rate: 0.77, likes: 328 },
-    { title: 'Aye-aye', rate: 0.54, likes: 451 },
-  ];
   return (
     <ProductPageWrapper
       className="section__container"
@@ -160,8 +150,22 @@ export default function Item() {
           </S.Description>
         </DescriptionWrapper>
         <SubTitle>Items For You</SubTitle>
-        <ProductList cards={cards} slider={{ overflow: true }}></ProductList>
+        <ProductList cards={products} slider={{ overflow: true }}></ProductList>
       </Container>
     </ProductPageWrapper>
   );
 }
+
+Item.getInitialProps = async () => {
+  const [products = []] = await Promise.all([
+    (async () => {
+      const data = await fetch(`http://localhost:3000/tmp/products.json`);
+      return data.json();
+    })(),
+  ]);
+  return {
+    products,
+  };
+};
+
+export default Item;

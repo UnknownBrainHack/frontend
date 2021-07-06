@@ -6,7 +6,7 @@ export const SwiperWrapper = styled.div`
   }
   .swiper-container {
     ${(p) =>
-      p.overflow &&
+    p.overflow &&
       `
       overflow: unset;
     `}

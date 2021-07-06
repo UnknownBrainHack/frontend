@@ -1,12 +1,51 @@
 [
   {
     "id": 1,
-    "name": "Карина",
-    "date": "2021-03-15T10:43:36.566Z",
-    "text":
-    "Не следует, однако забывать, что постоянный количественный рост и сфера нашей активности способствует подготовки и реализации системы обучения кадров, соответствует насущным потребностям. Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции требуют от нас анализа системы обучения кадров, соответствует насущным потребностям. Значимость этих проблем настолько очевидна, что реализация намеченных плановых заданий позволяет оценить значение дальнейших направлений развития. Разнообразный и богатый опыт сложившаяся структура организации играет важную роль в формировании модели развития.",
-    "rating": 4.1,
-    "likes": 1,
-    "dislikes": 0
+    "src": "images/RussianDragon.png",
+    "title": "Hey there",
+    "rate": 0.34,
+    "likes": 121
+  },{
+    "id": 2,
+    "src": "https://images.unsplash.com/photo-1593642633279-1796119d5482?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+    "title": "Hey there",
+    "rate": 0.34,
+    "likes": 121
+  },{
+    "id": 2,
+    "src": "https://images.unsplash.com/photo-1625519469785-daedecdc6b92?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+    "title": "Hey there",
+    "rate": 0.34,
+    "likes": 121
+  },{
+    "id": 2,
+    "src": "https://images.unsplash.com/photo-1625511626778-0b879ced54f6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+    "title": "Hey there",
+    "rate": 0.34,
+    "likes": 121
+  },{
+    "id": 2,
+    "src": "https://images.unsplash.com/photo-1593642633279-1796119d5482?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+    "title": "Hey there",
+    "rate": 0.34,
+    "likes": 121
+  },{
+    "id": 2,
+    "src": "https://images.unsplash.com/photo-1593642633279-1796119d5482?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+    "title": "Hey there",
+    "rate": 0.34,
+    "likes": 121
+  },{
+    "id": 2,
+    "src": "https://images.unsplash.com/photo-1625507951734-8268799286e9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
+    "title": "Hey there",
+    "rate": 0.34,
+    "likes": 121
+  },{
+    "id": 2,
+    "src": "https://images.unsplash.com/photo-1625535726342-e40cfc7a71d3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
+    "title": "Hey there",
+    "rate": 0.34,
+    "likes": 121
   }
 ]
