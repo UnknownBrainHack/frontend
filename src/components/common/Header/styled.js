@@ -24,6 +24,8 @@ export const MobileWrarrer = styled.div`
   `}
 `;
 export const Burger = styled.button`
+  top: 10px;
+  left: 10px;
   display: none;
   position: absolute;
   z-index: 1000;
@@ -85,6 +87,10 @@ export const Header = styled.header`
   position: relative;
   z-index: 1;
   border-bottom: 2px solid ${LIGHT_GRAY};
+
+  ${tablet} {
+    height: 60px;
+  }
 
   ${Container} {
     display: flex;
