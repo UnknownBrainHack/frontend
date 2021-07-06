@@ -1,37 +1,53 @@
-import React from 'react';
+import React, { useState } from 'react';
 import InputField from '../../components/ui/InputField/InputField';
-import TextArea from '../../components/ui/TextArea';
-import Button from '../../components/ui/Button';
+import Textarea from '../../components/ui/Textarea/Textarea';
+import Button from '../../components/ui/Button/Button';
 import Droparea from '../../components/ui/Droparea';
-import { motion } from 'framer-motion';
-import * as S from './styled';
+import { Container } from '../../components/ui/styled';
+import {
+  AddItemWrapper,
+  ButtonsWrapper,
+  LeftSection,
+  RightSection,
+} from './styled';
 
 export default function AddItem() {
+  const [price, setPrice] = useState('');
+  const handlerPrice = (e) => {
+    if (e.target.value.length > 15) {
+      return;
+    }
+    setPrice(e.target.value);
+  };
   return (
-    <motion.section
-      className="section__container"
+    <AddItemWrapper
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.2 }}
     >
-      <S.LeftSection>
-        <Droparea />
-      </S.LeftSection>
-      <S.RightSection>
-        <InputField placeholder="Some name" title="Input Item Name" big />
-        <TextArea title="Something" />
-        <InputField
-          big
-          placeholder="0.128 wETC"
-          title="Input Start Price"
-          type="number"
-        />
-        <S.ButtonsWrapper>
-          <Button>Publish item</Button>
-          <Button secondary>Save draft</Button>
-        </S.ButtonsWrapper>
-      </S.RightSection>
-    </motion.section>
+      <Container>
+        <LeftSection>
+          <Droparea />
+        </LeftSection>
+        <RightSection>
+          <InputField placeholder="Some name" title="Input Item Name" big />
+          <Textarea title="Something" />
+          <InputField
+            big
+            value={price}
+            onChange={handlerPrice}
+            placeholder="0.128 wETC"
+            suggestion="wETC"
+            title="Input Start Price"
+            type="number"
+          />
+          <ButtonsWrapper>
+            <Button>Publish item</Button>
+            <Button secondary>Save draft</Button>
+          </ButtonsWrapper>
+        </RightSection>
+      </Container>
+    </AddItemWrapper>
   );
 }

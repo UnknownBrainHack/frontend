@@ -21,8 +21,10 @@ export const rgba = (hex, alpha) => {
 };
 
 export const mobile = '@media screen and (max-width: 480px)';
+export const tablet = '@media screen and (max-width: 960px)';
 
-export const CONTAINER_DESKTOP = '1280px';
+export const CONTAINER_DESKTOP = '1320px';
+export const CONTAINER_TABLET = '720px';
 export const LAYOUT_PADDING = '20px';
 export const LAYOUT_WIDTH = (col) => {
   return `calc(${(col / 5) * 100}% - ${(col - 1) * 20}px)`;

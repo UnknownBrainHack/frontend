@@ -12,18 +12,7 @@
 }
 
 @mixin InputStyle() {
-  height: 46px;
-  border: 2px solid #efefef;
-  padding: 12px 18px;
-  border-radius: $BORDER_NORMAL;
-  outline: none;
-  transition: $transition;
-  &:focus {
-    @include FocusState();
-  }
-  &::placeholder {
-    color: $gray-3;
-  }
+
 }
 
 @mixin tablet-size {

@@ -1,21 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Label, StyledTextarea, Title } from './styled';
 
-export default function TextArea({ title, onChange, value, placeholder }) {
+export default function Textarea({ title, onChange, value, placeholder }) {
   return (
-    <label className="textarea__field">
-      {title && <span className="textarea__label">{title}</span>}
-      <textarea
+    <Label className="textarea__field">
+      {title && <Title className="textarea__label">{title}</Title>}
+      <StyledTextarea
         className="textarea__input"
         value={value}
         onChange={onChange}
         placeholder={placeholder}
       />
-    </label>
+    </Label>
   );
 }
 
-TextArea.propTypes = {
+Textarea.propTypes = {
   title: PropTypes.string,
   value: PropTypes.string,
   placeholder: PropTypes.string,

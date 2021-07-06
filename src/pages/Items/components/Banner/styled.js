@@ -1,13 +1,21 @@
 import styled from 'styled-components';
 import { BLACK, rgba } from '../../../../constants/variables';
 export const BannerConent = styled.div`
-  position: relative;
+  display: flex;
   height: 394px;
+  h1 {
+    margin-top: auto;
+    color: white;
+    position: relative;
+    z-index: 1;
+  }
+`;
+export const Banner = styled.section`
+  position: relative;
   width: 100%;
   background: url('../../../../images/RussianDragon.png') no-repeat center
     center;
   background-size: cover;
-  display: flex;
   &::before {
     content: '';
     height: 100%;
@@ -22,13 +30,4 @@ export const BannerConent = styled.div`
       ${rgba(BLACK, 0.5)} 100%
     );
   }
-
-  h1 {
-    margin-top: auto;
-    color: white;
-    margin-left: 30px;
-    position: relative;
-    z-index: 1;
-  }
 `;
-export const Banner = styled.section``;

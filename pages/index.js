@@ -1,6 +1,1 @@
-import React from 'react';
-import Items from './items';
-
-export default function Home() {
-  return <Items />;
-}
+export default from '../src/pages/Items/Items';

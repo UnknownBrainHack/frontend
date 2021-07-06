@@ -1,5 +1,4 @@
 import React, { useCallback, useState } from 'react';
-import Image from 'next/image';
 import Dropzone from 'react-dropzone';
 import PropTypes from 'prop-types';
 
@@ -31,9 +30,11 @@ export default function Droparea({ disabled = false, image }) {
             {!disabled && (
               <input {...getInputProps()} className="dropzone__input" />
             )}
-            <Image src={UploadIcon} alt="Upload File" />
-            <p>Upload file</p>
-            <Image
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            {!uploadedImage && <img src={UploadIcon} alt="Upload File" />}
+            {!uploadedImage && <p>Upload file</p>}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
               src={disabled ? image : uploadedImage}
               placeholder="empty"
               alt=""

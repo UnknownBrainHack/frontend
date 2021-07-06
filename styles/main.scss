@@ -5,7 +5,6 @@
 @import './components/index';
 @import './animations';
 
-@import './components/addItems/items';
 @import './components/item/item';
 
 h1,
@@ -61,25 +60,4 @@ h6 {
 body{
   overflow-x: hidden;
   max-width: 100vw;
-}
-
-.section__container {
-  margin-top: 48px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 35px;
-
-  @include phone-size {
-    display: block;
-  }
-
-  & > section:nth-of-type(2) {
-    padding-left: 16px;
-
-    @include phone-size {
-      padding-left: 0;
-      border: none;
-      margin-top: 24px;
-    }
-  }
 }

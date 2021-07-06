@@ -1,11 +1,13 @@
 import React from 'react';
-import ProductCard from '../../components/common/ProductCard/ProductCard';
 import { motion } from 'framer-motion';
 import * as S from './styled';
 import Banner from './components/Banner/Banner';
 import ProductList from '../../components/common/ProductList/ProductList';
+import { Container } from '../../components/ui/styled';
+import ProductGrid from '../../components/common/ProductGrid/ProductGrid';
 
-export default function Items() {
+function Items({ products }) {
+  console.log('products', products);
   const cards = [
     { title: 'Hey there', rate: 0.34, likes: 121 },
     { title: 'Hello, mate', rate: 0.11, likes: 41 },
@@ -22,43 +24,30 @@ export default function Items() {
       transition={{ duration: 0.2 }}
     >
       <Banner />
-      <section>
-        <S.SubTitle>Experts rated today</S.SubTitle>
-        <motion.div
-          className="items__grid"
-          initial="hidden"
-          animate="show"
-          exit="hidden"
-          variants={{
-            hidden: {},
-            show: {
-              transition: {
-                staggerChildren: 0.1,
-              },
-            },
-          }}
-        >
-          {cards.map((card) => (
-            <motion.div
-              variants={{
-                hidden: { scale: 0.9, opacity: 0 },
-                show: { scale: 1, opacity: 1 },
-              }}
-              key={card.title}
-            >
-              <ProductCard
-                title={card.title}
-                likes={card.likes}
-                rate={card.rate}
-              />
-            </motion.div>
-          ))}
-        </motion.div>
-      </section>
-      <section>
-        <S.SubTitle>Explore</S.SubTitle>
-        <ProductList cards={cards} />
-      </section>
+      <Container>
+        <section>
+          <S.SubTitle>Experts rated today</S.SubTitle>
+          <ProductGrid cards={cards} />
+        </section>
+        <section>
+          <S.SubTitle>Explore</S.SubTitle>
+          <ProductList slider={{ overflow: true }} cards={cards} />
+        </section>
+      </Container>
     </motion.div>
   );
 }
+
+Items.getInitialProps = async () => {
+  const [products = []] = await Promise.all([
+    (async () => {
+      const data = await fetch(`http://localhost:3000/tmp/products.json`);
+      return data.json();
+    })(),
+  ]);
+  return {
+    products,
+  };
+};
+
+export default Items;

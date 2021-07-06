@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import * as S from './styled';
+import { Input, InputWrapper, Suggestion, ValueSuggestion } from './styled';
 
 export default function InputField({
   title,
@@ -9,18 +9,26 @@ export default function InputField({
   placeholder,
   type = 'text',
   big,
+  suggestion,
 }) {
   return (
     <label className="input__field">
       {title && <span className="input__label">{title}</span>}
-      <S.Input
-        type={type}
-        className="input__input"
-        value={value}
-        onChange={onChange}
-        placeholder={placeholder}
-        big={big}
-      />
+      <InputWrapper>
+        {suggestion && value.length > 0 && (
+          <Suggestion big={big}>
+            <ValueSuggestion>{value}</ValueSuggestion>&nbsp;{suggestion}
+          </Suggestion>
+        )}
+        <Input
+          type={type}
+          className="input__input"
+          value={value}
+          onChange={onChange}
+          placeholder={placeholder}
+          big={big}
+        />
+      </InputWrapper>
     </label>
   );
 }

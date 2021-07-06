@@ -1,5 +1,28 @@
 import styled from 'styled-components';
-import { mobile } from '../../constants/variables';
+import { motion } from 'framer-motion';
+import { mobile, tablet } from '../../constants/variables';
+import { Container } from '../../components/ui/styled';
+
+export const ModalContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+`;
+export const ProductContainer = styled(Container)``;
+export const ProductPageWrapper = styled(motion.section)`
+  margin-top: 48px;
+  @include phone-size {
+    display: block;
+  }
+  ${ProductContainer} {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 35px;
+    ${tablet} {
+      grid-template-columns: 1fr;
+    }
+  }
+`;
 export const ActionButton = styled.div`
   display: flex;
   align-items: stretch;
@@ -15,6 +38,14 @@ export const ActionButton = styled.div`
       padding: 14px;
       margin: 0;
     }
+  }
+`;
+export const DescriptionWrapper = styled.div`
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 35px;
+  ${tablet} {
+    grid-template-columns: 1fr;
   }
 `;
 export const Description = styled.p`

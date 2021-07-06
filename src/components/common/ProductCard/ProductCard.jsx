@@ -9,8 +9,9 @@ export default function ProductCard({ title, rate, likes, src, alt = '' }) {
   return (
     <S.Card className="card-item">
       <Link href="/item">
-        <Image src={src || Background} alt={alt} className="card-item__image" />
+        <Image src={Background} alt={alt} className="card-item__image" />
       </Link>
+
       <S.Title>{title}</S.Title>
       <div className="card-item__rating">
         <p>

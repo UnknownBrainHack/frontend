@@ -4,8 +4,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import cx from 'classnames';
 import * as S from './styled';
-
-import image from '../../../images/search-icon.svg';
+import { Container } from '../../ui/styled';
 
 export default function Header() {
   const router = useRouter();
@@ -14,19 +13,25 @@ export default function Header() {
   const user = router.pathname === '/user';
   return (
     <S.Header>
-      <div className="header__user-profile">
-        <Image src={image} alt="Test Image" />
-      </div>
-      <input type="search" className="header__search" placeholder="search" />
-      <Link href="/">
-        <a className={cx({ active: home })}>Items</a>
-      </Link>
-      <Link href="/add-items">
-        <a className={cx({ active: addItems })}>Add items</a>
-      </Link>
-      <Link href="/user">
-        <a className={cx({ active: user })}>Profile</a>
-      </Link>
+      <Container>
+        <div className="header__user-profile">
+          <Image
+            src={'/images/search-icon.svg'}
+            layout="fill"
+            alt="Test Image"
+          />
+        </div>
+        <input type="search" className="header__search" placeholder="search" />
+        <Link href="/">
+          <a className={cx({ active: home })}>Items</a>
+        </Link>
+        <Link href="/add-items">
+          <a className={cx({ active: addItems })}>Add items</a>
+        </Link>
+        <Link href="/user">
+          <a className={cx({ active: user })}>Profile</a>
+        </Link>
+      </Container>
     </S.Header>
   );
 }

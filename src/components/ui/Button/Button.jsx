@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import cx from 'classnames';
+import { StyledButton } from './styled';
 
-export default function Button({ onClick, children, secondary }) {
+export default function Button({ onClick, children, simple, secondary }) {
   return (
-    <button className={cx('button', { secondary })} onClick={onClick}>
+    <StyledButton simple={simple} onClick={onClick} secondary={secondary}>
       {children}
-    </button>
+    </StyledButton>
   );
 }
 
@@ -14,4 +14,5 @@ Button.propTypes = {
   onClick: PropTypes.func,
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
   secondary: PropTypes.bool,
+  simple: PropTypes.bool,
 };

@@ -1,2 +1,1 @@
-import AddItem from '../src/pages/AddItem/AddItem';
-export default AddItem;
+export default from '../src/pages/AddItem/AddItem';
