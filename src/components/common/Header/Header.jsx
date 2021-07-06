@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import cx from 'classnames';
 import * as S from './styled';
 import { Container } from '../../ui/styled';
+import { Burger,MobileWrarrer } from "./styled";
 
 export default function Header() {
+  const [active, setActive] = useState(false);
   const router = useRouter();
   const home = router.pathname === '/';
   const addItems = router.pathname === '/add-items';
@@ -32,6 +34,20 @@ export default function Header() {
           <a className={cx({ active: user })}>Profile</a>
         </Link>
       </Container>
+      <Burger onClick={()=>setActive(!active)} active={active}>
+        <span />
+      </Burger>
+      <MobileWrarrer active={active}>
+        <Link href="/">
+          <a className={cx({ active: home })}>Items</a>
+        </Link>
+        <Link href="/add-items">
+          <a className={cx({ active: addItems })}>Add items</a>
+        </Link>
+        <Link href="/user">
+          <a className={cx({ active: user })}>Profile</a>
+        </Link>
+      </MobileWrarrer>
     </S.Header>
   );
 }

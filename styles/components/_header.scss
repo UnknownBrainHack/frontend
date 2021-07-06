@@ -3,10 +3,6 @@ header {
     display: none !important;
   }
 
-  & * {
-    margin-right: 32px;
-  }
-
   a {
     color: $gray-3;
     font-weight: bold;
@@ -15,9 +11,6 @@ header {
     text-decoration: none;
     padding: 10px 16px;
     transition: $transition;
-    &:last-of-type {
-      margin-left: auto;
-    }
     &.active,
     &:hover,
     &:active {
