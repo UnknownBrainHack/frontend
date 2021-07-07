@@ -10,7 +10,21 @@ function Slider({ children, overflow }) {
 
   return (
     <SwiperWrapper overflow={overflow}>
-      <Swiper spaceBetween={20} slidesPerView={5}>
+      <Swiper
+        breakpoints={{
+          480: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 4,
+          },
+          1024: {
+            slidesPerView: 5,
+          },
+        }}
+        spaceBetween={20}
+        slidesPerView={5}
+      >
         {slides?.map((slide, index) => (
           <SwiperSlide key={index}>{slide}</SwiperSlide>
         ))}

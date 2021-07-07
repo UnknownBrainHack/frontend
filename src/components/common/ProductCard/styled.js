@@ -19,6 +19,8 @@ export const ImageWrapper = styled.div`
   position: relative;
   width: 100%;
   padding-bottom: 100%;
+  border-radius: 16px;
+  overflow: hidden;
 `;
 export const StyledImage = styled.img`
   max-width: 100%;
