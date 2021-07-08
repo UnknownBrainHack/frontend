@@ -14,12 +14,15 @@ export const ProductPageWrapper = styled(motion.section)`
   @include phone-size {
     display: block;
   }
-  ${ProductContainer} {
-    display: grid;
-    grid-template-columns: 3fr 2fr;
-    gap: 35px;
-    ${tablet} {
-      grid-template-columns: 1fr;
+  
+  ${Container} {
+    &:first-of-type{
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      gap: 35px;
+      ${tablet} {
+        grid-template-columns: 1fr;
+      }  
     }
   }
 `;

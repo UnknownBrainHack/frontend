@@ -10,7 +10,6 @@ import { LeftSection, RightSection } from '../AddItem/styled';
 import Modal from '../../components/ui/Modal/Modal';
 import {
   DescriptionWrapper,
-  ProductContainer,
   ProductPageWrapper,
   ModalContainer,
 } from './styled';
@@ -27,7 +26,7 @@ function Item({ products }) {
       exit={{ opacity: 0, y: 200 }}
       transition={{ duration: 0.2 }}
     >
-      <ProductContainer>
+      <Container>
         <LeftSection>
           <Droparea disabled image={Dragon} />
         </LeftSection>
@@ -133,7 +132,7 @@ function Item({ products }) {
             </Modal>
           </S.ActionButton>
         </RightSection>
-      </ProductContainer>
+      </Container>
       <Container>
         <SubTitle>About Item</SubTitle>
         <DescriptionWrapper>
