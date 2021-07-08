@@ -8,22 +8,18 @@ export const ModalContainer = styled.div`
   flex-direction: column;
   justify-content: stretch;
 `;
-export const ProductContainer = styled(Container)``;
 export const ProductPageWrapper = styled(motion.section)`
   margin-top: 48px;
   @include phone-size {
     display: block;
   }
-  
-  ${Container} {
-    &:first-of-type{
-      display: grid;
-      grid-template-columns: 3fr 2fr;
-      gap: 35px;
-      ${tablet} {
-        grid-template-columns: 1fr;
-      }  
-    }
+`;
+export const ProductPageTopContainer = styled.div`
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 35px;
+  ${tablet} {
+    grid-template-columns: 1fr;
   }
 `;
 export const ActionButton = styled.div`

@@ -11,7 +11,7 @@ import Modal from '../../components/ui/Modal/Modal';
 import {
   DescriptionWrapper,
   ProductPageWrapper,
-  ModalContainer,
+  ModalContainer, ProductPageTopContainer,
 } from './styled';
 import { Container } from '../../components/ui/styled';
 import InputField from '../../components/ui/InputField/InputField';
@@ -19,121 +19,120 @@ import InputField from '../../components/ui/InputField/InputField';
 function Item({ products }) {
   const [open, setOpen] = useState(false);
   return (
-    <ProductPageWrapper
-      className="section__container"
-      initial={{ opacity: 0, y: 200 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: 200 }}
-      transition={{ duration: 0.2 }}
-    >
-      <Container>
-        <LeftSection>
-          <Droparea disabled image={Dragon} />
-        </LeftSection>
-        <RightSection>
-          <h4>Hey there</h4>
-          <div className="creator__container">
-            <p>Creator</p>
-            <div className="creator__user">
-              {/*<Image src={Dragon} alt="" />*/}
-              <span className="creator__name">Mike Wazowski</span>
-            </div>
-          </div>
-          <Tabs>
-            <div title="Rates">
-              <div>Hello</div>
-              <div>Hello</div>
-              <div>Hello</div>
-              <div>Hello</div>
-              <div>Hello</div>
-            </div>
-            <div title="Experts">
-              <div className="experts__wrapper">
-                <div className="experts__image">
-                  {/*<Image src={Dragon} alt="" />*/}
-                </div>
-                <div className="experts__user">
-                  <span className="experts__name">Johnny Wreck</span>
-                  <p>
-                    Rate: <span>2 ETH</span>
-                  </p>
-                  <p>
-                    Date: <span>2 July</span>
-                  </p>
-                </div>
-              </div>
-              <div className="experts__wrapper">
-                <div className="experts__image">
-                  {/*<Image src={Dragon} alt="" />*/}
-                </div>
-                <div className="experts__user">
-                  <span className="experts__name">Johnny Wreck</span>
-                  <p>
-                    Rate: <span>2 ETH</span>
-                  </p>
-                  <p>
-                    Date: <span>2 July</span>
-                  </p>
-                </div>
-              </div>
-              <div className="experts__wrapper">
-                <div className="experts__image">
-                  {/*<Image src={Dragon} alt="" />*/}
-                </div>
-                <div className="experts__user">
-                  <span className="experts__name">Johnny Wreck</span>
-                  <p>
-                    Rate: <span>2 ETH</span>
-                  </p>
-                  <p>
-                    Date: <span>2 July</span>
-                  </p>
-                </div>
-              </div>
-              <div className="experts__wrapper">
-                <div className="experts__image">
-                  {/*<Image src={Dragon} alt="" />*/}
-                </div>
-                <div className="experts__user">
-                  <span className="experts__name">Johnny Wreck</span>
-                  <p>
-                    Rate: <span>2 ETH</span>
-                  </p>
-                  <p>
-                    Date: <span>2 July</span>
-                  </p>
-                </div>
+    <Container>
+      <ProductPageWrapper
+        initial={{ opacity: 0, y: 200 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: 200 }}
+        transition={{ duration: 0.2 }}
+      >
+        <ProductPageTopContainer>
+          <LeftSection>
+            <Droparea disabled image={Dragon} />
+          </LeftSection>
+          <RightSection>
+            <h4>Hey there</h4>
+            <div className="creator__container">
+              <p>Creator</p>
+              <div className="creator__user">
+                {/*<Image src={Dragon} alt="" />*/}
+                <span className="creator__name">Mike Wazowski</span>
               </div>
             </div>
-          </Tabs>
-          <S.ActionButton
-            className="creator__user"
-            style={{ marginTop: 'auto' }}
-          >
-            <Button>Buy for 2.525 ETH</Button>
-            <Button secondary onClick={() => setOpen(true)}>
+            <Tabs>
+              <div title="Rates">
+                <div>Hello</div>
+                <div>Hello</div>
+                <div>Hello</div>
+                <div>Hello</div>
+                <div>Hello</div>
+              </div>
+              <div title="Experts">
+                <div className="experts__wrapper">
+                  <div className="experts__image">
+                    {/*<Image src={Dragon} alt="" />*/}
+                  </div>
+                  <div className="experts__user">
+                    <span className="experts__name">Johnny Wreck</span>
+                    <p>
+                    Rate: <span>2 ETH</span>
+                    </p>
+                    <p>
+                    Date: <span>2 July</span>
+                    </p>
+                  </div>
+                </div>
+                <div className="experts__wrapper">
+                  <div className="experts__image">
+                    {/*<Image src={Dragon} alt="" />*/}
+                  </div>
+                  <div className="experts__user">
+                    <span className="experts__name">Johnny Wreck</span>
+                    <p>
+                    Rate: <span>2 ETH</span>
+                    </p>
+                    <p>
+                    Date: <span>2 July</span>
+                    </p>
+                  </div>
+                </div>
+                <div className="experts__wrapper">
+                  <div className="experts__image">
+                    {/*<Image src={Dragon} alt="" />*/}
+                  </div>
+                  <div className="experts__user">
+                    <span className="experts__name">Johnny Wreck</span>
+                    <p>
+                    Rate: <span>2 ETH</span>
+                    </p>
+                    <p>
+                    Date: <span>2 July</span>
+                    </p>
+                  </div>
+                </div>
+                <div className="experts__wrapper">
+                  <div className="experts__image">
+                    {/*<Image src={Dragon} alt="" />*/}
+                  </div>
+                  <div className="experts__user">
+                    <span className="experts__name">Johnny Wreck</span>
+                    <p>
+                    Rate: <span>2 ETH</span>
+                    </p>
+                    <p>
+                    Date: <span>2 July</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </Tabs>
+            <S.ActionButton
+              className="creator__user"
+              style={{ marginTop: 'auto' }}
+            >
+              <Button>Buy for 2.525 ETH</Button>
+              <Button secondary onClick={() => setOpen(true)}>
               Rate item
-            </Button>
-            <Modal open={open} title="Rate Item" onClose={() => setOpen(false)}>
-              <ModalContainer>
-                <InputField
-                  placeholder={'2.7 ETH'}
-                  title={'Input Potential Price'}
-                />
-                <InputField
-                  placeholder={'2 weeks'}
-                  title={'Deadline of selling'}
-                />
-                <Button onClick={() => setOpen(false)}>Rate Item</Button>
-                <Button onClick={() => setOpen(false)} simple>
+              </Button>
+              <Modal open={open} title="Rate Item" onClose={() => setOpen(false)}>
+                <ModalContainer>
+                  <InputField
+                    placeholder={'2.7 ETH'}
+                    title={'Input Potential Price'}
+                  />
+                  <InputField
+                    placeholder={'2 weeks'}
+                    title={'Deadline of selling'}
+                  />
+                  <Button onClick={() => setOpen(false)}>Rate Item</Button>
+                  <Button onClick={() => setOpen(false)} simple>
                   Cancel
-                </Button>
-              </ModalContainer>
-            </Modal>
-          </S.ActionButton>
-        </RightSection>
-      </Container>
-      <Container>
+                  </Button>
+                </ModalContainer>
+              </Modal>
+            </S.ActionButton>
+          </RightSection>
+        </ProductPageTopContainer>
         <SubTitle>About Item</SubTitle>
         <DescriptionWrapper>
           <S.Description>
@@ -150,8 +149,8 @@ function Item({ products }) {
         </DescriptionWrapper>
         <SubTitle>Items For You</SubTitle>
         <ProductList cards={products} slider={{ overflow: true }}></ProductList>
-      </Container>
-    </ProductPageWrapper>
+      </ProductPageWrapper>
+    </Container>
   );
 }
 

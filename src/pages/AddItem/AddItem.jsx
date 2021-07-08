@@ -20,13 +20,13 @@ export default function AddItem() {
     setPrice(e.target.value);
   };
   return (
-    <AddItemWrapper
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.2 }}
-    >
-      <Container>
+    <Container>
+      <AddItemWrapper
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.2 }}
+      >
         <LeftSection>
           <Droparea />
         </LeftSection>
@@ -47,7 +47,7 @@ export default function AddItem() {
             <Button secondary>Save draft</Button>
           </ButtonsWrapper>
         </RightSection>
-      </Container>
-    </AddItemWrapper>
+      </AddItemWrapper>
+    </Container>
   );
 }

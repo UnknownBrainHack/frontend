@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import { LIGHT_GRAY, tablet } from '../../constants/variables';
 import { motion } from 'framer-motion';
-import { Container } from '../../components/ui/styled';
 export const ButtonsWrapper = styled.div`
   display: flex;
   gap: 20px;
@@ -14,13 +13,11 @@ export const AddItemWrapper = styled(motion.section)`
   @include phone-size {
     display: block;
   }
-  ${Container} {
-    display: grid;
-    grid-template-columns: 3fr 2fr;
-    gap: 35px;
-    ${tablet} {
-      grid-template-columns: 1fr;
-    }
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 35px;
+  ${tablet} {
+    grid-template-columns: 1fr;
   }
 `;
 export const LeftSection = styled.section``;
