@@ -35,7 +35,12 @@ export const StyledImage = styled.img`
   object-fit: cover;
 `;
 export const Title = styled.h6`
+  display: inline-block;
   margin-top: 16px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  overflow: hidden;
 `;
 export const LikeButton = styled.button`
   background: none;
@@ -51,6 +56,8 @@ export const LikeButton = styled.button`
 `;
 export const Card = styled.a`
   color: unset;
+  overflow: hidden;
+  max-width: 100%;
   display: block;
   background: #ffffff;
   border-radius: 16px;

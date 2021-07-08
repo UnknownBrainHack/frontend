@@ -27,6 +27,10 @@ function ProductGrid({ cards }) {
             hidden: { scale: 0.9, opacity: 0 },
             show: { scale: 1, opacity: 1 },
           }}
+          style={{
+            maxWidth:"100%",
+            minWidth: 0,
+          }}
           key={card.title}
         >
           <ProductCard
