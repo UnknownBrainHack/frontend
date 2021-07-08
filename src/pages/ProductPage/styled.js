@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { mobile, tablet } from '../../constants/variables';
-import { Container } from '../../components/ui/styled';
 
 export const ModalContainer = styled.div`
   display: flex;
