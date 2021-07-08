@@ -11,9 +11,6 @@ export const ButtonsWrapper = styled.div`
 `;
 export const AddItemWrapper = styled(motion.section)`
   margin-top: 48px;
-  @include phone-size {
-    display: block;
-  }
   display: grid;
   grid-template-columns: 3fr 2fr;
   gap: 35px;

@@ -1,14 +1,14 @@
 import styled, { css } from 'styled-components';
 import {
   BLUE,
-  BORDER_NORMAL,
+  BORDER_NORMAL, GRAY,
   GRAY_3,
   TRANSITION,
 } from '../../../constants/variables';
 export const Title = styled.span`
   font-size: 24px;
   line-height: 29px;
-  color: $GRAY;
+  color: ${GRAY};
   margin-bottom: 12px;
   display: inline-block;
 `;
@@ -17,19 +17,20 @@ export const ValueSuggestion = styled.span`
   color: transparent;
 `;
 export const Suggestion = styled.div`
+  padding: 12px 18px 12px 18px;
   width: 100%;
   position: absolute;
   height: 46px;
   top: 0;
   left: 0;
   border: 2px solid transparent;
-  padding: 8px 18px 12px 18px;
   line-height: 1.15;
   margin: 0;
   color: ${GRAY_3};
   ${(p) =>
     p.big &&
     css`
+      padding: 8px 18px 12px 18px;
       height: 60px;
       font-size: 36px;
       font-weight: 700;

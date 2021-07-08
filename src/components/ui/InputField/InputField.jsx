@@ -12,7 +12,7 @@ export default function InputField({
   suggestion,
 }) {
   return (
-    <label className="input__field">
+    <label>
       {title && <Title>{title}</Title>}
       <InputWrapper>
         {suggestion && value.length > 0 && (

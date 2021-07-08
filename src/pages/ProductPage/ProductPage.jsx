@@ -10,13 +10,25 @@ import Modal from '../../components/ui/Modal/Modal';
 import {
   DescriptionWrapper,
   ProductPageWrapper,
-  ModalContainer, ActionButton, Description, TopContainer,
+  ModalContainer,
+  Description,
+  TopContainer,
+  ActionButtons,
 } from './styled';
 import { Container } from '../../components/ui/styled';
 import InputField from '../../components/ui/InputField/InputField';
 
-function Item({ products }) {
+function ProductPage({ products }) {
   const [open, setOpen] = useState(false);
+  const [state, setState] = useState({
+    price:""
+  });
+  const handlerPrice = (e) => {
+    if (e.target.value.length > 15) {
+      return;
+    }
+    setState(p=>({...p,price:e.target.value}));
+  };
   return (
     <Container>
       <ProductPageWrapper
@@ -105,34 +117,34 @@ function Item({ products }) {
                 </div>
               </div>
             </Tabs>
-            <ActionButton
-              className="creator__user"
-              style={{ marginTop: 'auto' }}
-            >
+            <ActionButtons>
               <Button>Buy for 2.525 ETH</Button>
               <Button secondary onClick={() => setOpen(true)}>
-              Rate item
+                Rate item
               </Button>
-              <Modal open={open} title="Rate Item" onClose={() => setOpen(false)}>
-                <ModalContainer>
-                  <InputField
-                    placeholder={'2.7 ETH'}
-                    title={'Input Potential Price'}
-                  />
-                  <InputField
-                    placeholder={'2 weeks'}
-                    title={'Deadline of selling'}
-                  />
-                  <Button onClick={() => setOpen(false)}>Rate Item</Button>
-                  <Button onClick={() => setOpen(false)} simple>
+            </ActionButtons>
+            <Modal open={open} title="Rate ProductPage" onClose={() => setOpen(false)}>
+              <ModalContainer>
+                <InputField
+                  suggestion={"ETH"}
+                  value={state.price}
+                  onChange={handlerPrice}
+                  placeholder={'2.7 ETH'}
+                  title={'Input Potential Price'}
+                />
+                <InputField
+                  placeholder={'2 weeks'}
+                  title={'Deadline of selling'}
+                />
+                <Button onClick={() => setOpen(false)}>Rate ProductPage</Button>
+                <Button onClick={() => setOpen(false)} simple>
                   Cancel
-                  </Button>
-                </ModalContainer>
-              </Modal>
-            </ActionButton>
+                </Button>
+              </ModalContainer>
+            </Modal>
           </RightSection>
         </TopContainer>
-        <SubTitle>About Item</SubTitle>
+        <SubTitle>About ProductPage</SubTitle>
         <DescriptionWrapper>
           <Description>
             "The Ninth Wave" is one of the most famous paintings by the Russian
@@ -153,7 +165,7 @@ function Item({ products }) {
   );
 }
 
-Item.getInitialProps = async () => {
+ProductPage.getInitialProps = async () => {
   const [products = []] = await Promise.all([
     (async () => {
       const data = await fetch(`http://localhost:3000/tmp/products.json`);
@@ -165,4 +177,4 @@ Item.getInitialProps = async () => {
   };
 };
 
-export default Item;
+export default ProductPage;

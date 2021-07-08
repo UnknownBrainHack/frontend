@@ -17,6 +17,7 @@ export const StyledButton = styled.button`
   cursor: pointer;
   transition: ${TRANSITION};
   white-space: nowrap;
+  display: inline-block;
 
   ${(p) =>
     p.secondary &&
