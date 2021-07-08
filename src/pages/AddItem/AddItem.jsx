@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import InputField from '../../components/ui/InputField/InputField';
 import Textarea from '../../components/ui/Textarea/Textarea';
 import Button from '../../components/ui/Button/Button';
-import Droparea from '../../components/ui/Droparea';
+import DropArea from '../../components/ui/DropArea/DropArea';
 import { Container } from '../../components/ui/styled';
 import {
   AddItemWrapper,
@@ -28,7 +28,7 @@ export default function AddItem() {
         transition={{ duration: 0.2 }}
       >
         <LeftSection>
-          <Droparea />
+          <DropArea />
         </LeftSection>
         <RightSection>
           <InputField placeholder="Some name" title="Input Item Name" big />

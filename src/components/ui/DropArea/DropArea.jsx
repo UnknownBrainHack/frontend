@@ -2,10 +2,11 @@ import React, { useCallback, useState } from 'react';
 import Dropzone from 'react-dropzone';
 import PropTypes from 'prop-types';
 
-import UploadIcon from '../../images/file.svg';
-import EmptyImage from '../../images/Empty.png';
+import UploadIcon from '../../../images/file.svg';
+import EmptyImage from '../../../images/Empty.png';
+import { DropZone, DropZoneInput, DropZoneWrapper } from "./styled";
 
-export default function Droparea({ disabled = false, image }) {
+export default function DropArea({ disabled = false, image }) {
   const [uploadedImage, setUploadedImage] = useState(EmptyImage);
   const onDrop = useCallback((acceptedFiles) => {
     const reader = new FileReader();
@@ -25,10 +26,10 @@ export default function Droparea({ disabled = false, image }) {
   return (
     <Dropzone onDrop={onDrop}>
       {({ getRootProps, getInputProps }) => (
-        <div {...getRootProps()} className="dropzone">
-          <div className="dropzone__wrapper">
+        <DropZone {...getRootProps()} className="dropzone">
+          <DropZoneWrapper className="dropzone__wrapper">
             {!disabled && (
-              <input {...getInputProps()} className="dropzone__input" />
+              <DropZoneInput {...getInputProps()} className="dropzone__input" />
             )}
             {/* eslint-disable-next-line @next/next/no-img-element */}
             {!uploadedImage && <img src={UploadIcon} alt="Upload File" />}
@@ -40,14 +41,14 @@ export default function Droparea({ disabled = false, image }) {
               alt=""
               layout="fill"
             />
-          </div>
-        </div>
+          </DropZoneWrapper>
+        </DropZone>
       )}
     </Dropzone>
   );
 }
 
-Droparea.propTypes = {
+DropArea.propTypes = {
   disabled: PropTypes.bool,
   image: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
 };

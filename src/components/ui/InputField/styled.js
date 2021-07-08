@@ -5,6 +5,14 @@ import {
   GRAY_3,
   TRANSITION,
 } from '../../../constants/variables';
+export const Title = styled.span`
+  font-size: 24px;
+  line-height: 29px;
+  color: $GRAY;
+  margin-bottom: 12px;
+  display: inline-block;
+`;
+
 export const ValueSuggestion = styled.span`
   color: transparent;
 `;

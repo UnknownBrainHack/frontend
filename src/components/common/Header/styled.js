@@ -2,6 +2,22 @@ import styled, { css } from 'styled-components';
 import { LIGHT_GRAY, tablet, TRANSITION, WHITE } from '../../../constants/variables';
 import { Container } from '../../ui/styled';
 
+export const NavItems = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 32px;
+`;
+export const LogoWrapper = styled.div`
+  position: relative;
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+`;
 export const MobileWrarrer = styled.div`
   background-color: ${WHITE};
   display: none;

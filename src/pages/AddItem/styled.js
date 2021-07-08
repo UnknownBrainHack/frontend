@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { LIGHT_GRAY, tablet } from '../../constants/variables';
 import { motion } from 'framer-motion';
+import { Label } from "../../components/ui/Textarea/styled";
 export const ButtonsWrapper = styled.div`
   display: flex;
   gap: 20px;
@@ -22,10 +23,14 @@ export const AddItemWrapper = styled(motion.section)`
 `;
 export const LeftSection = styled.section``;
 export const RightSection = styled.section`
+  gap: 20px;
   display: flex;
   flex-direction: column;
   border-left: 2px solid ${LIGHT_GRAY};
   padding-left: 16px;
+  ${Label}{
+    flex-grow: 1;
+  }
   h4 {
     margin-bottom: 48px;
   }

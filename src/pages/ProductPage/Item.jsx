@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
-import Droparea from '../../components/ui/Droparea';
+import DropArea from '../../components/ui/DropArea/DropArea';
 import Dragon from '../../images/RussianDragon.png';
 import Tabs from '../../components/ui/Tabs';
 import Button from '../../components/ui/Button/Button';
-import * as S from './styled';
 import { SubTitle } from '../Items/styled';
 import ProductList from '../../components/common/ProductList/ProductList';
 import { LeftSection, RightSection } from '../AddItem/styled';
@@ -11,7 +10,7 @@ import Modal from '../../components/ui/Modal/Modal';
 import {
   DescriptionWrapper,
   ProductPageWrapper,
-  ModalContainer, ProductPageTopContainer,
+  ModalContainer, ActionButton, Description, TopContainer,
 } from './styled';
 import { Container } from '../../components/ui/styled';
 import InputField from '../../components/ui/InputField/InputField';
@@ -26,9 +25,9 @@ function Item({ products }) {
         exit={{ opacity: 0, y: 200 }}
         transition={{ duration: 0.2 }}
       >
-        <ProductPageTopContainer>
+        <TopContainer>
           <LeftSection>
-            <Droparea disabled image={Dragon} />
+            <DropArea disabled image={Dragon} />
           </LeftSection>
           <RightSection>
             <h4>Hey there</h4>
@@ -106,7 +105,7 @@ function Item({ products }) {
                 </div>
               </div>
             </Tabs>
-            <S.ActionButton
+            <ActionButton
               className="creator__user"
               style={{ marginTop: 'auto' }}
             >
@@ -130,12 +129,12 @@ function Item({ products }) {
                   </Button>
                 </ModalContainer>
               </Modal>
-            </S.ActionButton>
+            </ActionButton>
           </RightSection>
-        </ProductPageTopContainer>
+        </TopContainer>
         <SubTitle>About Item</SubTitle>
         <DescriptionWrapper>
-          <S.Description>
+          <Description>
             "The Ninth Wave" is one of the most famous paintings by the Russian
             marine painter of Armenian origin Ivan Aivazovsky, kept in the
             Russian Museum in St. Petersburg (inv. Zh-2202) [1]. Written in
@@ -145,7 +144,7 @@ function Item({ products }) {
             people who were shipwrecked. The sun's rays illuminate huge waves.
             The largest of them - the ninth shaft - is ready to fall on people
             trying to escape on the wreckage of the mast.
-          </S.Description>
+          </Description>
         </DescriptionWrapper>
         <SubTitle>Items For You</SubTitle>
         <ProductList cards={products} slider={{ overflow: true }}></ProductList>

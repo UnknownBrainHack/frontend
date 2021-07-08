@@ -13,14 +13,6 @@ export const ProductPageWrapper = styled(motion.section)`
     display: block;
   }
 `;
-export const ProductPageTopContainer = styled.div`
-  display: grid;
-  grid-template-columns: 3fr 2fr;
-  gap: 35px;
-  ${tablet} {
-    grid-template-columns: 1fr;
-  }
-`;
 export const ActionButton = styled.div`
   display: flex;
   align-items: stretch;
@@ -36,6 +28,14 @@ export const ActionButton = styled.div`
       padding: 14px;
       margin: 0;
     }
+  }
+`;
+export const TopContainer = styled.div`
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 35px;
+  ${tablet} {
+    grid-template-columns: 1fr;
   }
 `;
 export const DescriptionWrapper = styled.div`

@@ -4,7 +4,7 @@ import { Label, StyledTextarea, Title } from './styled';
 
 export default function Textarea({ title, onChange, value, placeholder }) {
   return (
-    <Label className="textarea__field">
+    <Label>
       {title && <Title className="textarea__label">{title}</Title>}
       <StyledTextarea
         className="textarea__input"

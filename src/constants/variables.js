@@ -1,4 +1,3 @@
-import { css } from 'styled-components';
 export const hexToRgb = (hex) => {
   const shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
   hex = hex.replace(shorthandRegex, function (m, r, g, b) {
@@ -42,8 +41,8 @@ export const WHITE = '#FFFFFF';
 export const BORDER_NORMAL = '12px';
 
 export const SHADOW_BIG = (COLOR = VIOLET) =>
-  css`0px 44px 150px 20px ${rgba(COLOR, 0.25)}`;
+  `0px 44px 150px 20px ${rgba(COLOR, 0.25)}`;
 export const SHADOW_SMALL = (COLOR = VIOLET) =>
-  css`0px 22px 55px 11px ${rgba(COLOR, 0.25)}`;
+  `0px 22px 55px 11px ${rgba(COLOR, 0.25)}`;
 
 export const TRANSITION = '0.3s cubic-bezier(0.215, 0.61, 0.355, 1)';

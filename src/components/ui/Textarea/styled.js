@@ -13,6 +13,7 @@ export const StyledTextarea = styled.textarea`
   border-radius: ${BORDER_NORMAL};
   outline: none;
   transition: ${TRANSITION};
+  flex-grow: 1;
   padding: 12px 100px 12px 18px;
   position: relative;
   background-color: transparent;
@@ -48,5 +49,6 @@ export const Title = styled.span`
 `;
 export const Label = styled.label`
   display: flex;
+  flex-direction: column;
   position: relative;
 `;

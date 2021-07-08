@@ -1,11 +1,5 @@
 @import './normalize';
 @import './fonts';
-@import './variables';
-@import './mixins';
-@import './components/index';
-@import './animations';
-
-@import './components/item/item';
 
 h1,
 h2,
@@ -20,11 +14,6 @@ h6 {
 h1 {
   font-size: 72px;
   margin-bottom: 48px;
-
-  @include phone-size {
-    font-size: 48px;
-    margin-bottom: 34px;
-  }
 }
 
 h2 {
@@ -35,11 +24,6 @@ h2 {
 h3 {
   font-size: 48px;
   margin-bottom: 34px;
-
-  @include phone-size {
-    font-size: 24px;
-    margin-bottom: 18px;
-  }
 }
 
 h4 {
