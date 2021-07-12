@@ -7,7 +7,6 @@ import { Container } from '../../components/ui/styled';
 import ProductGrid from '../../components/common/ProductGrid/ProductGrid';
 
 function Items({ products }) {
-  console.log('products', products);
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -33,8 +32,13 @@ function Items({ products }) {
 Items.getInitialProps = async () => {
   const [products = []] = await Promise.all([
     (async () => {
-      const data = await fetch(`http://localhost:3000/tmp/products.json`);
-      return data.json();
+      const response = await fetch(`http://localhost:3000/tmp/products.json`);
+
+      if (response.ok) {
+        return await response.json();
+      } else {
+        console.log("Ошибка HTTP: " + response.status);
+      }
     })(),
   ]);
   return {
