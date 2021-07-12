@@ -29,6 +29,7 @@ function ProductPage({ products }) {
     }
     setState(p=>({...p,price:e.target.value}));
   };
+  console.log("products", products);
   return (
     <Container>
       <ProductPageWrapper
