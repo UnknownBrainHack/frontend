@@ -29,7 +29,8 @@ export const LAYOUT_PADDING = '20px';
 
 export const LIGHT_GRAY = '#EFEFEF';
 export const RED = '#e01313';
-export const VIOLET = '#9200ff';
+// export const VIOLET = '#9200ff';
+export const VIOLET = '#ff9900';
 export const BLUE = '#0166FF';
 export const DARK_BLUE = '#00359a';
 export const BLACK = '#101010';
