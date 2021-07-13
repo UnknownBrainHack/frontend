@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { BLUE, GRAY, tablet, TRANSITION } from "../../../../../constants/variables";
+import { BLACK, BLUE, GRAY, tablet, TRANSITION } from "../../../../../constants/variables";
 
 export const FrontLink = styled.a`
   color: ${GRAY};
@@ -10,10 +10,13 @@ export const FrontLink = styled.a`
   line-height: 29px;
   display: inline-block;
   padding:  9px 16px;
+  &:hover{
+    color: ${BLACK};
+  }
   ${p=>p.active && css`
     color: ${BLUE};
   `}
-
+  
   ${tablet}{
   }
 `;

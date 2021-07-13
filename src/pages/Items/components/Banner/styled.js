@@ -13,7 +13,9 @@ export const BannerConent = styled.div`
 export const Banner = styled.section`
   position: relative;
   width: 100%;
-  background: url('../../../../images/RussianDragon.png') no-repeat center
+  /*background: url('../../../../images/RussianDragon.png') no-repeat center
+    center;*/
+  background: url('https://picsum.photos/1920/1080') no-repeat center
     center;
   background-size: cover;
   &::before {

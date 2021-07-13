@@ -38,13 +38,13 @@ export default function AddItem() {
             value={price}
             onChange={handlerPrice}
             placeholder="0.128 wETC"
-            suggestion="wETC"
+            suggestion="wETH"
             title="Input Start Price"
             type="number"
           />
           <ButtonsWrapper>
-            <Button>Publish item</Button>
-            <Button secondary>Save draft</Button>
+            <Button>Publish Item</Button>
+            <Button secondary>Save Draft</Button>
           </ButtonsWrapper>
         </RightSection>
       </AddItemWrapper>

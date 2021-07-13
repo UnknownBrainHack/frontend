@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import {
   BLUE,
-  BORDER_NORMAL,
+  BORDER_NORMAL, GRAY,
   GRAY_3,
   TRANSITION,
 } from '../../../constants/variables';
@@ -24,7 +24,7 @@ export const StyledTextarea = styled.textarea`
   -moz-appearance: textfield;
 
   &:focus {
-    box-shadow: 0 0 2px 1px ${BLUE};
+    border: 2px solid ${BLUE};
     outline: 0;
   }
 
@@ -43,7 +43,7 @@ export const StyledTextarea = styled.textarea`
 export const Title = styled.span`
   font-size: 24px;
   line-height: 29px;
-  color: $GRAY;
+  color: ${GRAY};
   margin-bottom: 12px;
   display: inline-block;
 `;

@@ -3,6 +3,7 @@ import { SHADOW_BIG } from '../../../constants/variables';
 
 export const ModalContainer = styled.div`
   position: fixed;
+  background-color: rgba(0,0,0,0.25);
   top: 0;
   left: 0;
   right: 0;

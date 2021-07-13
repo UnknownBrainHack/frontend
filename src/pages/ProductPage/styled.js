@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import { tablet } from '../../constants/variables';
+import { mobile, tablet } from '../../constants/variables';
 
 export const ActionButtons = styled.div`
   margin-top: auto;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 20px;
 
   ${tablet} {
@@ -15,6 +16,9 @@ export const ActionButtons = styled.div`
       padding: 14px;
       margin: 0;
     }
+  }
+  ${mobile}{
+    grid-template-columns: 1fr;
   }
 `;
 
@@ -47,6 +51,8 @@ export const DescriptionWrapper = styled.div`
 export const Description = styled.p`
   max-width: 940px;
   margin-bottom: 30px;
+  font-size: 16px;
+  line-height: 150%;
 
   &:last-of-type {
     margin-bottom: 0;

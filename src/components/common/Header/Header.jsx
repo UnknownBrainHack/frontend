@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 import { useRouter } from 'next/router';
-import cx from 'classnames';
 import * as S from './styled';
 import { Container } from '../../ui/styled';
 import { Burger, LogoWrapper, MobileWrarrer,NavItems } from "./styled";
@@ -20,15 +18,15 @@ export default function Header() {
       <Container>
         <LogoWrapper>
           <Image
-            src={'/images/search-icon.svg'}
+            src={'/images/brain-icon.png'}
             layout="fill"
             alt="Test Image"
           />
         </LogoWrapper>
-        <InputField type="search" className="header__search" placeholder="search" />
+        <InputField className="header__search" placeholder="Search" />
         <NavItems>
           <NavItem href="/" active={home}>Items</NavItem>
-          <NavItem href="/add-items" active={addItems}>Add items</NavItem>
+          <NavItem href="/add-items" active={addItems}>Add Items</NavItem>
           <NavItem href="/user" active={user}>Profile</NavItem>
         </NavItems>
       </Container>
@@ -36,15 +34,9 @@ export default function Header() {
         <span />
       </Burger>
       <MobileWrarrer active={active}>
-        <Link href="/">
-          <a className={cx({ active: home })}>Items</a>
-        </Link>
-        <Link href="/add-items">
-          <a className={cx({ active: addItems })}>Add items</a>
-        </Link>
-        <Link href="/user">
-          <a className={cx({ active: user })}>Profile</a>
-        </Link>
+        <NavItem onClick={()=>{setActive(false);}} href="/" active={home}>Items</NavItem>
+        <NavItem onClick={()=>{setActive(false);}} href="/add-items" active={addItems}>Add Items</NavItem>
+        <NavItem onClick={()=>{setActive(false);}} href="/user" active={user}>Profile</NavItem>
       </MobileWrarrer>
     </S.Header>
   );

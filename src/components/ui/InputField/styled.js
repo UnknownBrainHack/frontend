@@ -57,7 +57,7 @@ export const Input = styled.input`
   -moz-appearance: textfield;
 
   &:focus {
-    box-shadow: 0 0 2px 1px ${BLUE};
+    border: 2px solid ${BLUE};
     outline: 0;
   }
 

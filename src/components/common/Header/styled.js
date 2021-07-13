@@ -1,10 +1,11 @@
 import styled, { css } from 'styled-components';
-import { LIGHT_GRAY, tablet, TRANSITION, WHITE } from '../../../constants/variables';
+import { BLACK, LIGHT_GRAY, tablet, TRANSITION, WHITE } from '../../../constants/variables';
 import { Container } from '../../ui/styled';
 
 export const NavItems = styled.div`
   display: flex;
   align-items: center;
+  padding-left: 32px;
   gap: 32px;
 `;
 export const LogoWrapper = styled.div`
@@ -12,6 +13,7 @@ export const LogoWrapper = styled.div`
   width: 60px;
   height: 60px;
   overflow: hidden;
+  margin-right: 24px;
   border-radius: 12px;
   display: flex;
   justify-content: center;
@@ -57,19 +59,21 @@ export const Burger = styled.button`
   span {
     position: relative;
     display: block;
-    width: 20px;
+    width: 30px;
     height: 4px;
-    background: #222;
-    transition: all .2s ease-in-out;
+    border-radius: 20px;
+    background: ${BLACK};
+    transition: all .2s ease-out;
 
     &:before, &:after {
       left: 0;
+      border-radius: 20px;
       position: absolute;
-      background: #222;
+      background: ${BLACK};
       content: '';
-      width: 20px;
+      width: 30px;
       height: 4px;
-      transition: all .2s ease-in-out;
+      transition: all .2s ease-out;
     }
 
     &:before {

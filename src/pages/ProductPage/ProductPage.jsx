@@ -170,7 +170,7 @@ ProductPage.getInitialProps = async () => {
   const [products = []] = await Promise.all([
     (async () => {
       // eslint-disable-next-line no-undef
-      const data = await fetch(`${process.env.BASIC_HOST || ''}/tmp/products.json`);
+      const data = await fetch(`${process.env.BASIC_HOST || ''}tmp/products.json`);
       return data.json();
     })(),
   ]);
