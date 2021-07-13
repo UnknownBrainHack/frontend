@@ -37,7 +37,7 @@ export default function AddItem() {
             big
             value={price}
             onChange={handlerPrice}
-            placeholder="0.128 wETC"
+            placeholder="0.128 wETH"
             suggestion="wETH"
             title="Input Start Price"
             type="number"
