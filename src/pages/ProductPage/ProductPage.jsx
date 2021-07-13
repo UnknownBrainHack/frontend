@@ -121,7 +121,7 @@ function ProductPage({ products }) {
             <ActionButtons>
               <Button>Buy for 2.525 ETH</Button>
               <Button secondary onClick={() => setOpen(true)}>
-                Rate item
+                Rate Item
               </Button>
             </ActionButtons>
             <Modal open={open} title="Rate ProductPage" onClose={() => setOpen(false)}>

@@ -31,15 +31,15 @@ export default function AddItem() {
           <DropArea />
         </LeftSection>
         <RightSection>
-          <InputField placeholder="Something" title="Input description of the item" big />
-          <Textarea title="Something" />
+          <InputField placeholder="Something" title="Name" big />
+          <Textarea title="Description" placeholder="Something"/>
           <InputField
             big
             value={price}
             onChange={handlerPrice}
             placeholder="0.128 wETH"
             suggestion="wETH"
-            title="Input Start Price"
+            title="Price"
             type="number"
           />
           <ButtonsWrapper>

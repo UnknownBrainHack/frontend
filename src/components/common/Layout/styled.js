@@ -5,8 +5,9 @@ export const Main = styled.main`
   padding: 0 0 40px;
   margin: 0 auto;
   position: relative;
+  overflow-x: hidden;
   z-index: 0;
   ${mobile} {
-    padding: 0 16px 40px;
+    padding: 0 0 40px;
   }
 `;
