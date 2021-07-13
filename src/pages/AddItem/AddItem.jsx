@@ -31,7 +31,7 @@ export default function AddItem() {
           <DropArea />
         </LeftSection>
         <RightSection>
-          <InputField placeholder="Some name" title="Input ProductPage Name" big />
+          <InputField placeholder="Something" title="Input description of the item" big />
           <Textarea title="Something" />
           <InputField
             big
