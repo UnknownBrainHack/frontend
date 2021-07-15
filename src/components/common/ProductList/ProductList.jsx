@@ -10,6 +10,7 @@ function ProductList({ cards, slider }) {
         <Slider {...slider}>
           {cards.map((card) => (
             <ProductCard
+              id={card.id}
               key={card.title}
               title={card.title}
               likes={card.likes}
@@ -54,6 +55,7 @@ function ProductList({ cards, slider }) {
                 hidden: { scale: 1, opacity: 0 },
                 show: { scale: 1, opacity: 1 },
               }}
+              id={card.id}
               key={card.title}
               title={card.title}
               likes={card.likes}

@@ -38,6 +38,7 @@ function ProductGrid({ cards }) {
               hidden: { scale: 1, opacity: 0 },
               show: { scale: 1, opacity: 1 },
             }}
+            id={card.id}
             key={card.title}
             title={card.title}
             likes={card.likes}

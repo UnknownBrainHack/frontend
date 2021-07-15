@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { BLACK, rgba } from '../../../../constants/variables';
+import { BLACK, mobile, rgba } from '../../../../constants/variables';
 export const BannerConent = styled.div`
   display: flex;
   height: 394px;
@@ -8,6 +8,9 @@ export const BannerConent = styled.div`
     color: white;
     position: relative;
     z-index: 1;
+        ${mobile}{
+              font-size: 48px;
+        }
   }
 `;
 export const Banner = styled.section`

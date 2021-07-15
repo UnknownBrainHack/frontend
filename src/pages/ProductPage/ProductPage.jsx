@@ -17,8 +17,9 @@ import {
 } from './styled';
 import { Container } from '../../components/ui/styled';
 import InputField from '../../components/ui/InputField/InputField';
+import Select from "../../components/ui/Select/Select";
 
-function ProductPage({ products }) {
+function ProductPage({ products, product }) {
   const [open, setOpen] = useState(false);
   const [state, setState] = useState({
     price:""
@@ -29,7 +30,7 @@ function ProductPage({ products }) {
     }
     setState(p=>({...p,price:e.target.value}));
   };
-  console.log("products", products);
+  console.log("product", product);
   return (
     <Container>
       <ProductPageWrapper
@@ -40,10 +41,10 @@ function ProductPage({ products }) {
       >
         <TopContainer>
           <LeftSection>
-            <DropArea disabled image={Dragon} />
+            <DropArea disabled image={product.src} />
           </LeftSection>
           <RightSection>
-            <h4>Hey there</h4>
+            <h4>{product.title}</h4>
             <div className="creator__container">
               <p>Creator</p>
               <div className="creator__user">
@@ -133,10 +134,7 @@ function ProductPage({ products }) {
                   placeholder={'2.7 ETH'}
                   title={'Input Potential Price'}
                 />
-                <InputField
-                  placeholder={'2 weeks'}
-                  title={'Deadline of selling'}
-                />
+                <Select items={[{value:1,label:"1 weeks"},{value:2,label:"2 weeks"}]} value={2}></Select>
                 <Button onClick={() => setOpen(false)}>Rate ProductPage</Button>
                 <Button onClick={() => setOpen(false)} simple>
                   Cancel
@@ -166,7 +164,8 @@ function ProductPage({ products }) {
   );
 }
 
-ProductPage.getInitialProps = async () => {
+ProductPage.getInitialProps = async ({query}) => {
+  console.log("query", query);
   const [products = []] = await Promise.all([
     (async () => {
       // eslint-disable-next-line no-undef
@@ -174,8 +173,10 @@ ProductPage.getInitialProps = async () => {
       return data.json();
     })(),
   ]);
+  const product = products.find(p=>(p.id == query.index));
   return {
     products,
+    product: product || {}
   };
 };
 

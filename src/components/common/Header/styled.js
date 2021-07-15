@@ -19,6 +19,7 @@ export const LogoWrapper = styled.div`
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  opacity: 0.5;
 `;
 export const MobileWrarrer = styled.div`
   background-color: ${WHITE};
@@ -59,7 +60,7 @@ export const Burger = styled.button`
   span {
     position: relative;
     display: block;
-    width: 30px;
+    width: 25px;
     height: 4px;
     border-radius: 20px;
     background: ${BLACK};
@@ -71,7 +72,7 @@ export const Burger = styled.button`
       position: absolute;
       background: ${BLACK};
       content: '';
-      width: 30px;
+      width: 25px;
       height: 4px;
       transition: all .2s ease-out;
     }

@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
 import {
+  BLACK,
   BLUE,
   GRAY_3,
   LIGHT_GRAY, RED,
@@ -42,7 +43,7 @@ export const Description = styled.div`
   color: ${GRAY_3};
   font-size: 14px;
   line-height: 18px;
-  margin-top: 19px;
+  margin-top: 6px;
 `;
 export const Rating = styled.div`
   span {
@@ -50,10 +51,11 @@ export const Rating = styled.div`
     font-weight: bold;
   }
 `;
-export const ImageWrapper = styled.div`
+export const ImageWrapper = styled.a`
+  display: block;
   position: relative;
   width: 100%;
-  padding-bottom: 100%;
+  padding-bottom: 125%;
   border-radius: 16px;
   overflow: hidden;
 `;
@@ -69,13 +71,17 @@ export const StyledImage = styled.img`
   max-height: 100%;
   object-fit: cover;
 `;
-export const Title = styled.h6`
+export const Title = styled.a`
   display: inline-block;
   margin: 16px 0 0 0;
   white-space: nowrap;
   text-overflow: ellipsis;
   max-width: 100%;
   overflow: hidden;
+  font-size: 18px;
+  color: ${BLACK};
+  font-weight: bold;
+  text-decoration: none;
 `;
 export const LikeButton = styled.button`
   background: none;
@@ -89,7 +95,7 @@ export const LikeButton = styled.button`
     margin-left: 6px;
   }
 `;
-export const Card = styled.a`
+export const Card = styled.div`
   color: unset;
   overflow: hidden;
   max-width: 100%;

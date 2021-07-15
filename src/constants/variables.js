@@ -1,3 +1,5 @@
+import { css } from "styled-components";
+
 export const hexToRgb = (hex) => {
   const shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
   hex = hex.replace(shorthandRegex, function (m, r, g, b) {
@@ -46,3 +48,27 @@ export const SHADOW_SMALL = (COLOR = VIOLET) =>
   `0px 22px 55px 11px ${rgba(COLOR, 0.25)}`;
 
 export const TRANSITION = '0.3s cubic-bezier(0.215, 0.61, 0.355, 1)';
+
+export const scrollbar = css`
+  /* FF */
+  scrollbar-color: rgba(34, 50, 84, 0.3) transparent;
+  scrollbar-width: thin;
+
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+    max-height: 20px;
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(34, 50, 84, 0.3);
+    background-clip: padding-box;
+    border: 3px solid transparent;
+    border-radius: 7px;
+  }
+`;
