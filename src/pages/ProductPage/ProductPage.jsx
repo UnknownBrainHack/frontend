@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import DropArea from '../../components/ui/DropArea/DropArea';
-import Dragon from '../../images/RussianDragon.png';
 import Tabs from '../../components/ui/Tabs';
 import Button from '../../components/ui/Button/Button';
 import { SubTitle } from '../Items/styled';

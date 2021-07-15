@@ -35,6 +35,12 @@ const Select = ({
   );
   const listRef = useRef(null);
 
+  function setSelect() {
+    if (type) return;
+
+    setDefaultSelect(false);
+  }
+
   useEffect(() => {
     setSelect();
 
@@ -62,11 +68,6 @@ const Select = ({
     };
   }, [opened]);
 
-  function setSelect() {
-    if (type) return;
-
-    setDefaultSelect(false);
-  }
 
   useEffect(() => {
     if (opened && !defaultSelect) {
