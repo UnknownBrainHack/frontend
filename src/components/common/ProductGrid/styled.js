@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import { laptop, mobile, tablet } from "../../../constants/variables";
+import { BLACK, laptop, mobile, tablet } from "../../../constants/variables";
 export const StyledProductGrid = styled(motion.div)`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -14,4 +14,10 @@ export const StyledProductGrid = styled(motion.div)`
   ${mobile}{
     grid-template-columns: 1fr;
   }
+`;
+
+export const SubTitle = styled.h3`
+  margin-top: 64px;
+  margin-bottom: 16px;
+  color: ${BLACK};
 `;

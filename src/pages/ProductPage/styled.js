@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import { mobile, tablet } from '../../constants/variables';
+import { BLACK, mobile, tablet } from '../../constants/variables';
 
 export const ActionButtons = styled.div`
   margin-top: auto;
@@ -20,6 +20,12 @@ export const ActionButtons = styled.div`
   ${mobile}{
     grid-template-columns: 1fr;
   }
+`;
+
+export const SubTitle = styled.h3`
+  margin-top: 64px;
+  margin-bottom: 16px;
+  color: ${BLACK};
 `;
 
 export const ModalContainer = styled.div`

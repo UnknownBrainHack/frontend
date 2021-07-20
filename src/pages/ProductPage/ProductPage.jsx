@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
-import DropArea from '../../components/ui/DropArea/DropArea';
 import Tabs from '../../components/ui/Tabs';
 import Button from '../../components/ui/Button/Button';
-import { SubTitle } from '../Items/styled';
 import ProductList from '../../components/common/ProductList/ProductList';
 import { LeftSection, RightSection } from '../AddItem/styled';
 import Modal from '../../components/ui/Modal/Modal';
@@ -12,11 +10,12 @@ import {
   ModalContainer,
   Description,
   TopContainer,
-  ActionButtons,
+  ActionButtons, SubTitle,
 } from './styled';
 import { Container } from '../../components/ui/styled';
 import InputField from '../../components/ui/InputField/InputField';
 import Select from "../../components/ui/Select/Select";
+import ZoomImage from "../../components/common/ZoomImage/ZoomImage";
 
 function ProductPage({ products, product }) {
   const [open, setOpen] = useState(false);
@@ -40,7 +39,7 @@ function ProductPage({ products, product }) {
       >
         <TopContainer>
           <LeftSection>
-            <DropArea disabled image={product.src} />
+            <ZoomImage src={product.src}/>
           </LeftSection>
           <RightSection>
             <h4>{product.title}</h4>
@@ -156,8 +155,7 @@ function ProductPage({ products, product }) {
             trying to escape on the wreckage of the mast.
           </Description>
         </DescriptionWrapper>
-        <SubTitle>Items For You</SubTitle>
-        <ProductList cards={products} slider={{ overflow: true }}></ProductList>
+        <ProductList title={"Items For You"} cards={products} slider={{ overflow: true }}></ProductList>
       </ProductPageWrapper>
     </Container>
   );

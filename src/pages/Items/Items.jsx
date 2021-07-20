@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import * as S from './styled';
 import Banner from './components/Banner/Banner';
 import ProductList from '../../components/common/ProductList/ProductList';
 import { Container } from '../../components/ui/styled';
@@ -17,12 +16,10 @@ function Items({ products }) {
       <Banner />
       <Container>
         <section>
-          <S.SubTitle>Experts rated today</S.SubTitle>
-          <ProductGrid cards={products} />
+          <ProductGrid title={"Experts rated today"} cards={products} />
         </section>
         <section>
-          <S.SubTitle>Explore</S.SubTitle>
-          <ProductList slider={{ overflow: true }} cards={products} />
+          <ProductList title={"Explore"} slider={{ overflow: true }} cards={products} />
         </section>
       </Container>
     </motion.div>

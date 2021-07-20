@@ -25,6 +25,11 @@ export const mobile = '@media screen and (max-width: 480px)';
 export const tablet = '@media screen and (max-width: 960px)';
 export const laptop = '@media screen and (max-width: 1200px)';
 
+export const MOBILE = 480;
+export const TABLET = 960;
+export const LAPTOP = 1200;
+
+
 export const CONTAINER_DESKTOP = '1320px';
 export const CONTAINER_TABLET = '720px';
 export const LAYOUT_PADDING = '20px';

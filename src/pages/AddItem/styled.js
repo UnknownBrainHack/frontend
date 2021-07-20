@@ -18,7 +18,10 @@ export const AddItemWrapper = styled(motion.section)`
     grid-template-columns: 1fr;
   }
 `;
-export const LeftSection = styled.section``;
+export const LeftSection = styled.section`
+  position: relative;
+  max-height: 786px;
+`;
 export const RightSection = styled.section`
   gap: 20px;
   display: flex;

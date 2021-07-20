@@ -26,8 +26,8 @@ export default function Header() {
         <InputField className="header__search" placeholder="Search" />
         <NavItems>
           <NavItem href="/" active={home}>Items</NavItem>
-          <NavItem href="/add-items" active={addItems}>Add Items</NavItem>
-          <NavItem href="/user" active={user}>Profile</NavItem>
+          <NavItem href="/add-items/" active={addItems}>Add Items</NavItem>
+          <NavItem href="/profile/" active={user}>Profile</NavItem>
         </NavItems>
       </Container>
       <Burger onClick={()=>setActive(!active)} active={active}>
@@ -35,8 +35,8 @@ export default function Header() {
       </Burger>
       <MobileWrarrer active={active}>
         <NavItem onClick={()=>{setActive(false);}} href="/" active={home}>Items</NavItem>
-        <NavItem onClick={()=>{setActive(false);}} href="/add-items" active={addItems}>Add Items</NavItem>
-        <NavItem onClick={()=>{setActive(false);}} href="/user" active={user}>Profile</NavItem>
+        <NavItem onClick={()=>{setActive(false);}} href="/add-items/" active={addItems}>Add Items</NavItem>
+        <NavItem onClick={()=>{setActive(false);}} href="/profile/" active={user}>Profile</NavItem>
       </MobileWrarrer>
     </S.Header>
   );

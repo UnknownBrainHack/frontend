@@ -5,37 +5,60 @@ import {
   GRAY_3,
   LIGHT_GRAY, RED,
   SHADOW_BIG,
-  SHADOW_SMALL,
+  SHADOW_SMALL, tablet,
   TRANSITION,
   VIOLET, WHITE,
 } from '../../../constants/variables';
 
 export const LikeWrapper = styled.div`
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 5px;
+  right: 5px;
   z-index: 1;
-  background-color: transparent;
+  background-color: ${WHITE};
   border-radius: 20px;
   box-shadow: 0 4px 4px 0 rgba(0,0,0,0);
   transition: ${TRANSITION};
   span{
+    display: none;
+    margin-right: 4px;
+    line-height: 8px;
     transition: ${TRANSITION};
     opacity: 0;
-    transform: translateX(100px);
+    transform: translateY(2px);
+    ${tablet}{
+      display: block;
+      opacity: 1;
+    }
+  }
+  svg{
+    transition: ${TRANSITION};
+    transform: translateY(1px);
+    &:hover path{
+      fill: ${GRAY_3};
+    }
   }
   svg path{
+    stroke: ${GRAY_3};
+    stroke-width: 1px;
+    stroke-linejoin: round;
+    fill: none;
     transition: ${TRANSITION};
   }
   &:hover{
     svg path{
-      stroke: ${RED};
     }
   }
   ${p=>p.likes && css`
-    svg path{
-      stroke: ${RED};
-      fill: ${RED};
+    svg{
+      path{
+        fill: ${RED};
+        stroke: none;
+      }
+      &:hover path{
+        stroke: ${RED};
+        fill: none;
+      }
     }
   `}
 `;
@@ -88,12 +111,11 @@ export const LikeButton = styled.button`
   outline: none;
   border: none;
   display: flex;
+  align-items: center;
   font-weight: bold;
   color: ${GRAY_3};
   cursor: pointer;
-  svg {
-    margin-left: 6px;
-  }
+  padding: 5px;
 `;
 export const Card = styled.div`
   color: unset;
@@ -103,20 +125,18 @@ export const Card = styled.div`
   background: #ffffff;
   border-radius: 16px;
   padding: 16px 16px 20px;
-  transition: 0.2s ease-out;
   text-decoration: none;
   transition: ${TRANSITION};
   position: relative;
   box-shadow: 0 0 0 transparent, 0 0 0 2px ${LIGHT_GRAY};
   &:hover {
     ${LikeWrapper}{
-      transition-delay: 0.4s;
       background-color: ${WHITE};
       box-shadow: 0 4px 4px 0 rgba(0,0,0,0.25);
       span{
+        display: block;
         transition-delay: 0.4s;
         opacity: 1;
-        transform: translateX(0);
       }
     }
     z-index: 1;

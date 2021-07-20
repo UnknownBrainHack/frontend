@@ -1,12 +1,24 @@
-import * as S from './styled';
 import { motion } from 'framer-motion';
 import ProductCard from '../ProductCard/ProductCard';
 import Slider from '../Slider/Slider';
-
-function ProductList({ cards, slider }) {
+import { Arrow, ArrowWrapper, StyledProductList, SubTitle, TitleWrapper } from "./styled";
+import ArrowIcon from "../../../images/arrowNew.svg";
+function ProductList({ cards, slider, title }) {
   if (slider) {
     return (
-      <S.StyledProductList>
+      <StyledProductList>
+        <TitleWrapper>
+          <SubTitle>{title}</SubTitle>
+          <ArrowWrapper>
+            <Arrow left className="swiper-button-prev-unique">
+              <ArrowIcon />
+            </Arrow>
+            <Arrow className="swiper-button-next-unique">
+              <ArrowIcon />
+            </Arrow>
+          </ArrowWrapper>
+
+        </TitleWrapper>
         <Slider {...slider}>
           {cards.map((card) => (
             <ProductCard
@@ -19,11 +31,11 @@ function ProductList({ cards, slider }) {
             />
           ))}
         </Slider>
-      </S.StyledProductList>
+      </StyledProductList>
     );
   }
   return (
-    <S.StyledProductList>
+    <StyledProductList>
       <div
         className="items__grid"
         initial="hidden"
@@ -65,7 +77,7 @@ function ProductList({ cards, slider }) {
           </motion.div>
         ))}
       </div>
-    </S.StyledProductList>
+    </StyledProductList>
   );
 }
 
