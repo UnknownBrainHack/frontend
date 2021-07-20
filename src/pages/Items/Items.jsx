@@ -33,7 +33,6 @@ function Items({ products }) {
 Items.getInitialProps = async () => {
   const [products = []] = await Promise.all([
     (async () => {
-      // eslint-disable-next-line no-undef
       const response = await fetch(
         `${process.env.BASIC_HOST || ''}/tmp/products.json`
       );
