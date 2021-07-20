@@ -16,10 +16,14 @@ function Items({ products }) {
       <Banner />
       <Container>
         <section>
-          <ProductGrid title={"Experts rated today"} cards={products} />
+          <ProductGrid title={'Experts rated today'} cards={products} />
         </section>
         <section>
-          <ProductList title={"Explore"} slider={{ overflow: true }} cards={products} />
+          <ProductList
+            title={'Explore'}
+            slider={{ overflow: 'true' }}
+            cards={products}
+          />
         </section>
       </Container>
     </motion.div>
@@ -30,12 +34,14 @@ Items.getInitialProps = async () => {
   const [products = []] = await Promise.all([
     (async () => {
       // eslint-disable-next-line no-undef
-      const response = await fetch(`${process.env.BASIC_HOST || ''}/tmp/products.json`);
+      const response = await fetch(
+        `${process.env.BASIC_HOST || ''}/tmp/products.json`
+      );
 
       if (response.ok) {
         return await response.json();
       } else {
-        console.log("Ошибка HTTP: " + response.status);
+        console.log('Ошибка HTTP: ' + response.status);
       }
     })(),
   ]);

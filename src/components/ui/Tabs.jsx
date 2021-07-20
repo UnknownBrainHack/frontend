@@ -4,9 +4,6 @@ export default function Tabs({ children }) {
   const items = Array.isArray(children) ? children : [children];
   const [selected, setSelected] = useState(0);
 
-  const handleSelection = (i) => {
-    setSelected(i);
-  };
   return (
     <div className="tabs">
       <div className="tabs__header">
@@ -14,7 +11,7 @@ export default function Tabs({ children }) {
           <button
             className={cx('tabs__header-button', { active: selected === i })}
             key={i}
-            onClick={() => handleSelection(i)}
+            onClick={() => setSelected(i)}
           >
             {item?.props.title}
           </button>

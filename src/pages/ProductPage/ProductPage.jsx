@@ -10,25 +10,27 @@ import {
   ModalContainer,
   Description,
   TopContainer,
-  ActionButtons, SubTitle,
+  ActionButtons,
+  SubTitle,
 } from './styled';
 import { Container } from '../../components/ui/styled';
 import InputField from '../../components/ui/InputField/InputField';
-import Select from "../../components/ui/Select/Select";
-import ZoomImage from "../../components/common/ZoomImage/ZoomImage";
+import Select from '../../components/ui/Select/Select';
+import ZoomImage from '../../components/common/ZoomImage/ZoomImage';
+import Rates from '../../components/ui/Chart/Rates';
 
 function ProductPage({ products, product }) {
   const [open, setOpen] = useState(false);
   const [state, setState] = useState({
-    price:""
+    price: '',
   });
   const handlerPrice = (e) => {
     if (e.target.value.length > 15) {
       return;
     }
-    setState(p=>({...p,price:e.target.value}));
+    setState((p) => ({ ...p, price: e.target.value }));
   };
-  console.log("product", product);
+  console.log('product', product);
   return (
     <Container>
       <ProductPageWrapper
@@ -39,7 +41,7 @@ function ProductPage({ products, product }) {
       >
         <TopContainer>
           <LeftSection>
-            <ZoomImage src={product.src}/>
+            <ZoomImage src={product.src} />
           </LeftSection>
           <RightSection>
             <h4>{product.title}</h4>
@@ -52,11 +54,7 @@ function ProductPage({ products, product }) {
             </div>
             <Tabs>
               <div title="Rates">
-                <div>Hello</div>
-                <div>Hello</div>
-                <div>Hello</div>
-                <div>Hello</div>
-                <div>Hello</div>
+                <Rates />
               </div>
               <div title="Experts">
                 <div className="experts__wrapper">
@@ -66,24 +64,10 @@ function ProductPage({ products, product }) {
                   <div className="experts__user">
                     <span className="experts__name">Johnny Wreck</span>
                     <p>
-                    Rate: <span>2 ETH</span>
+                      Rate: <span>2 ETH</span>
                     </p>
                     <p>
-                    Date: <span>2 July</span>
-                    </p>
-                  </div>
-                </div>
-                <div className="experts__wrapper">
-                  <div className="experts__image">
-                    {/*<Image src={Dragon} alt="" />*/}
-                  </div>
-                  <div className="experts__user">
-                    <span className="experts__name">Johnny Wreck</span>
-                    <p>
-                    Rate: <span>2 ETH</span>
-                    </p>
-                    <p>
-                    Date: <span>2 July</span>
+                      Date: <span>2 July</span>
                     </p>
                   </div>
                 </div>
@@ -94,10 +78,10 @@ function ProductPage({ products, product }) {
                   <div className="experts__user">
                     <span className="experts__name">Johnny Wreck</span>
                     <p>
-                    Rate: <span>2 ETH</span>
+                      Rate: <span>2 ETH</span>
                     </p>
                     <p>
-                    Date: <span>2 July</span>
+                      Date: <span>2 July</span>
                     </p>
                   </div>
                 </div>
@@ -108,10 +92,24 @@ function ProductPage({ products, product }) {
                   <div className="experts__user">
                     <span className="experts__name">Johnny Wreck</span>
                     <p>
-                    Rate: <span>2 ETH</span>
+                      Rate: <span>2 ETH</span>
                     </p>
                     <p>
-                    Date: <span>2 July</span>
+                      Date: <span>2 July</span>
+                    </p>
+                  </div>
+                </div>
+                <div className="experts__wrapper">
+                  <div className="experts__image">
+                    {/*<Image src={Dragon} alt="" />*/}
+                  </div>
+                  <div className="experts__user">
+                    <span className="experts__name">Johnny Wreck</span>
+                    <p>
+                      Rate: <span>2 ETH</span>
+                    </p>
+                    <p>
+                      Date: <span>2 July</span>
                     </p>
                   </div>
                 </div>
@@ -123,16 +121,26 @@ function ProductPage({ products, product }) {
                 Rate Item
               </Button>
             </ActionButtons>
-            <Modal open={open} title="Rate ProductPage" onClose={() => setOpen(false)}>
+            <Modal
+              open={open}
+              title="Rate ProductPage"
+              onClose={() => setOpen(false)}
+            >
               <ModalContainer>
                 <InputField
-                  suggestion={"ETH"}
+                  suggestion={'ETH'}
                   value={state.price}
                   onChange={handlerPrice}
                   placeholder={'2.7 ETH'}
                   title={'Input Potential Price'}
                 />
-                <Select items={[{value:1,label:"1 weeks"},{value:2,label:"2 weeks"}]} value={2}></Select>
+                <Select
+                  items={[
+                    { value: 1, label: '1 weeks' },
+                    { value: 2, label: '2 weeks' },
+                  ]}
+                  value={2}
+                ></Select>
                 <Button onClick={() => setOpen(false)}>Rate ProductPage</Button>
                 <Button onClick={() => setOpen(false)} simple>
                   Cancel
@@ -155,25 +163,31 @@ function ProductPage({ products, product }) {
             trying to escape on the wreckage of the mast.
           </Description>
         </DescriptionWrapper>
-        <ProductList title={"Items For You"} cards={products} slider={{ overflow: true }}></ProductList>
+        <ProductList
+          title={'Items For You'}
+          cards={products}
+          slider={{ overflow: 'true' }}
+        ></ProductList>
       </ProductPageWrapper>
     </Container>
   );
 }
 
-ProductPage.getInitialProps = async ({query}) => {
-  console.log("query", query);
+ProductPage.getInitialProps = async ({ query }) => {
+  console.log('query', query);
   const [products = []] = await Promise.all([
     (async () => {
       // eslint-disable-next-line no-undef
-      const data = await fetch(`${process.env.BASIC_HOST || ''}tmp/products.json`);
+      const data = await fetch(
+        `${process.env.BASIC_HOST || ''}tmp/products.json`
+      );
       return data.json();
     })(),
   ]);
-  const product = products.find(p=>(p.id == query.index));
+  const product = products.find((p) => p.id == query.index);
   return {
     products,
-    product: product || {}
+    product: product || {},
   };
 };
 
