@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React, { useState } from 'react';
 import Tabs from '../../components/ui/Tabs';
 import Button from '../../components/ui/Button/Button';
@@ -48,7 +49,7 @@ function ProductPage({ products, product }) {
             <div className="creator__container">
               <p>Creator</p>
               <div className="creator__user">
-                {/*<Image src={Dragon} alt="" />*/}
+                <img src={product.src} alt="" />
                 <span className="creator__name">Mike Wazowski</span>
               </div>
             </div>
@@ -59,7 +60,7 @@ function ProductPage({ products, product }) {
               <div title="Experts">
                 <div className="experts__wrapper">
                   <div className="experts__image">
-                    {/*<Image src={Dragon} alt="" />*/}
+                    <img src={product.src} alt="" />
                   </div>
                   <div className="experts__user">
                     <span className="experts__name">Johnny Wreck</span>
@@ -73,7 +74,7 @@ function ProductPage({ products, product }) {
                 </div>
                 <div className="experts__wrapper">
                   <div className="experts__image">
-                    {/*<Image src={Dragon} alt="" />*/}
+                    <img src={product.src} alt="" />
                   </div>
                   <div className="experts__user">
                     <span className="experts__name">Johnny Wreck</span>
@@ -87,7 +88,7 @@ function ProductPage({ products, product }) {
                 </div>
                 <div className="experts__wrapper">
                   <div className="experts__image">
-                    {/*<Image src={Dragon} alt="" />*/}
+                    <img src={product.src} alt="" />
                   </div>
                   <div className="experts__user">
                     <span className="experts__name">Johnny Wreck</span>
@@ -101,7 +102,7 @@ function ProductPage({ products, product }) {
                 </div>
                 <div className="experts__wrapper">
                   <div className="experts__image">
-                    {/*<Image src={Dragon} alt="" />*/}
+                    <img src={product.src} alt="" />
                   </div>
                   <div className="experts__user">
                     <span className="experts__name">Johnny Wreck</span>

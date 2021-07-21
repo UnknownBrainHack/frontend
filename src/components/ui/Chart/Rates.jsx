@@ -6,7 +6,7 @@ export default function Rates() {
     labels: [1, 2, 3, 4, 5, 6, 7],
     datasets: [
       {
-        label: 'ETH',
+        label: '≈ ETH',
         data: [65, 59, 80, 81, 56, 55, 40],
         backgroundColor: '#E9F2FF',
         borderRadius: 8,
@@ -17,6 +17,9 @@ export default function Rates() {
 
   const options = {
     plugins: {
+      legend: {
+        display: false,
+      },
       tooltip: {
         xAlign: 'center',
         yAlign: 'bottom',
@@ -26,6 +29,7 @@ export default function Rates() {
         caretPadding: 10,
         caretSize: 7,
         cornerRadius: 10,
+        displayColors: false,
       },
     },
     scales: {
