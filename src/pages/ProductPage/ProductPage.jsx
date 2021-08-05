@@ -54,7 +54,7 @@ function ProductPage({ products, product }) {
               </div>
             </div>
             <Tabs>
-              <div title="Rates">
+              <div title="Appraisal">
                 <Rates />
               </div>
               <div title="Experts">
@@ -65,7 +65,7 @@ function ProductPage({ products, product }) {
                   <div className="experts__user">
                     <span className="experts__name">Johnny Wreck</span>
                     <p>
-                      Rate: <span>2 ETH</span>
+                      Appraise: <span>2 ETH</span>
                     </p>
                     <p>
                       Date: <span>2 July</span>
@@ -79,7 +79,7 @@ function ProductPage({ products, product }) {
                   <div className="experts__user">
                     <span className="experts__name">Johnny Wreck</span>
                     <p>
-                      Rate: <span>2 ETH</span>
+                      Appraise: <span>2 ETH</span>
                     </p>
                     <p>
                       Date: <span>2 July</span>
@@ -93,7 +93,7 @@ function ProductPage({ products, product }) {
                   <div className="experts__user">
                     <span className="experts__name">Johnny Wreck</span>
                     <p>
-                      Rate: <span>2 ETH</span>
+                      Appraise: <span>2 ETH</span>
                     </p>
                     <p>
                       Date: <span>2 July</span>
@@ -107,7 +107,7 @@ function ProductPage({ products, product }) {
                   <div className="experts__user">
                     <span className="experts__name">Johnny Wreck</span>
                     <p>
-                      Rate: <span>2 ETH</span>
+                      Appraise: <span>2 ETH</span>
                     </p>
                     <p>
                       Date: <span>2 July</span>
@@ -119,12 +119,12 @@ function ProductPage({ products, product }) {
             <ActionButtons>
               <Button>Buy for 2.525 ETH</Button>
               <Button secondary onClick={() => setOpen(true)}>
-                Rate Item
+                Appraise Art
               </Button>
             </ActionButtons>
             <Modal
               open={open}
-              title="Rate ProductPage"
+              title="Appraise Art"
               onClose={() => setOpen(false)}
             >
               <ModalContainer>
@@ -165,7 +165,7 @@ function ProductPage({ products, product }) {
           </Description>
         </DescriptionWrapper>
         <ProductList
-          title={'Items For You'}
+          title="Arts for you"
           cards={products}
           slider={{ overflow: 'true' }}
         ></ProductList>
