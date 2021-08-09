@@ -33,7 +33,12 @@ export default function Modal({
         }}
         onAnimationEnd={setInvisible}
       >
-        <ModalWrapper ref={modal}>
+        <ModalWrapper
+          ref={modal}
+          style={{
+            animation: `${open ? 'scaleUp' : 'scaleDown'} 0.35s`,
+          }}
+        >
           <ModalHeader>{title}</ModalHeader>
           <ModalBody>{children}</ModalBody>
         </ModalWrapper>

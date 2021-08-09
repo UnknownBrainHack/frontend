@@ -32,7 +32,7 @@ export default function AddItem() {
         </LeftSection>
         <RightSection>
           <InputField placeholder="Something" title="Name" big />
-          <Textarea title="Description" placeholder="Something"/>
+          <Textarea title="Description" placeholder="Something" />
           <InputField
             big
             value={price}
@@ -43,7 +43,7 @@ export default function AddItem() {
             type="number"
           />
           <ButtonsWrapper>
-            <Button>Publish Item</Button>
+            <Button>Publish Art</Button>
             <Button secondary>Save Draft</Button>
           </ButtonsWrapper>
         </RightSection>
