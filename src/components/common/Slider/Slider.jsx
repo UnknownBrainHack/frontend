@@ -29,7 +29,7 @@ function Slider({ children, overflow }) {
         }}
         spaceBetween={20}
         slidesPerView={1}
-        scrollbar={{ draggable: true, hide: true }}
+        scrollbar={{ draggable: true, hide: false }}
         breakpoints={{
           480: {
             slidesPerView: 2,
