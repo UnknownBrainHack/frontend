@@ -1,8 +1,11 @@
-// eslint-disable-next-line no-undef
 module.exports = {
-  reactStrictMode: true,
+  reactStrictMode: false,
   publicRuntimeConfig: {
-    // eslint-disable-next-line no-undef
     BASIC_HOST: process.env.BASIC_HOST,
-  }
+  },
+  eslint: {
+    // Warning: Dangerously allow production builds to successfully complete even if
+    // your project has ESLint errors.
+    ignoreDuringBuilds: true,
+  },
 };
