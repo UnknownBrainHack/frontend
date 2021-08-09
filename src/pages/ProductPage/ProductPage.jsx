@@ -54,7 +54,7 @@ function ProductPage({ products, product }) {
               </div>
             </div>
             <Tabs>
-              <div title="Appraisal">
+              <div title="Appraisals">
                 <Rates />
               </div>
               <div title="Experts">
