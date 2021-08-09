@@ -8,14 +8,14 @@ export const NavItems = styled.div`
   padding-left: 32px;
   gap: 32px;
 `;
-export const LogoWrapper = styled.div`
+export const LogoWrapper = styled.a`
+  display: flex;
   position: relative;
   width: 60px;
   height: 60px;
   overflow: hidden;
   margin-right: 24px;
   border-radius: 12px;
-  display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;

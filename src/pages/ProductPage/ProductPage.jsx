@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React, { useState } from 'react';
 import Tabs from '../../components/ui/Tabs';
 import Button from '../../components/ui/Button/Button';
@@ -48,23 +49,23 @@ function ProductPage({ products, product }) {
             <div className="creator__container">
               <p>Creator</p>
               <div className="creator__user">
-                {/*<Image src={Dragon} alt="" />*/}
+                <img src={product.src} alt="" />
                 <span className="creator__name">Mike Wazowski</span>
               </div>
             </div>
             <Tabs>
-              <div title="Rates">
+              <div title="Appraisal">
                 <Rates />
               </div>
               <div title="Experts">
                 <div className="experts__wrapper">
                   <div className="experts__image">
-                    {/*<Image src={Dragon} alt="" />*/}
+                    <img src={product.src} alt="" />
                   </div>
                   <div className="experts__user">
                     <span className="experts__name">Johnny Wreck</span>
                     <p>
-                      Rate: <span>2 ETH</span>
+                      Appraise: <span>2 ETH</span>
                     </p>
                     <p>
                       Date: <span>2 July</span>
@@ -73,12 +74,12 @@ function ProductPage({ products, product }) {
                 </div>
                 <div className="experts__wrapper">
                   <div className="experts__image">
-                    {/*<Image src={Dragon} alt="" />*/}
+                    <img src={product.src} alt="" />
                   </div>
                   <div className="experts__user">
                     <span className="experts__name">Johnny Wreck</span>
                     <p>
-                      Rate: <span>2 ETH</span>
+                      Appraise: <span>2 ETH</span>
                     </p>
                     <p>
                       Date: <span>2 July</span>
@@ -87,12 +88,12 @@ function ProductPage({ products, product }) {
                 </div>
                 <div className="experts__wrapper">
                   <div className="experts__image">
-                    {/*<Image src={Dragon} alt="" />*/}
+                    <img src={product.src} alt="" />
                   </div>
                   <div className="experts__user">
                     <span className="experts__name">Johnny Wreck</span>
                     <p>
-                      Rate: <span>2 ETH</span>
+                      Appraise: <span>2 ETH</span>
                     </p>
                     <p>
                       Date: <span>2 July</span>
@@ -101,12 +102,12 @@ function ProductPage({ products, product }) {
                 </div>
                 <div className="experts__wrapper">
                   <div className="experts__image">
-                    {/*<Image src={Dragon} alt="" />*/}
+                    <img src={product.src} alt="" />
                   </div>
                   <div className="experts__user">
                     <span className="experts__name">Johnny Wreck</span>
                     <p>
-                      Rate: <span>2 ETH</span>
+                      Appraise: <span>2 ETH</span>
                     </p>
                     <p>
                       Date: <span>2 July</span>
@@ -118,12 +119,12 @@ function ProductPage({ products, product }) {
             <ActionButtons>
               <Button>Buy for 2.525 ETH</Button>
               <Button secondary onClick={() => setOpen(true)}>
-                Rate Item
+                Appraise Art
               </Button>
             </ActionButtons>
             <Modal
               open={open}
-              title="Rate ProductPage"
+              title="Appraise Art"
               onClose={() => setOpen(false)}
             >
               <ModalContainer>
@@ -164,7 +165,7 @@ function ProductPage({ products, product }) {
           </Description>
         </DescriptionWrapper>
         <ProductList
-          title={'Items For You'}
+          title="Arts for you"
           cards={products}
           slider={{ overflow: 'true' }}
         ></ProductList>

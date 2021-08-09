@@ -2,7 +2,6 @@ import styled, { css } from 'styled-components';
 import {
   BLUE,
   BORDER_NORMAL,
-  DARK_BLUE,
   LIGHT_BLUE,
   TRANSITION,
 } from '../../../constants/variables';
@@ -23,7 +22,7 @@ export const StyledButton = styled.button`
     p.secondary &&
     css`
       background: ${LIGHT_BLUE};
-      color: ${DARK_BLUE};
+      color: ${BLUE};
     `}
 
   ${(p) =>

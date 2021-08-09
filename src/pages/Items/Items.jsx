@@ -16,11 +16,11 @@ function Items({ products }) {
       <Banner />
       <Container>
         <section>
-          <ProductGrid title={'Experts rated today'} cards={products} />
+          <ProductGrid title="Experts appraised today" cards={products} />
         </section>
         <section>
           <ProductList
-            title={'Explore'}
+            title="Gallery"
             slider={{ overflow: 'true' }}
             cards={products}
           />

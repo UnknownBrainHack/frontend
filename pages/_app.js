@@ -1,5 +1,6 @@
 import '../styles/main.scss';
 import 'swiper/swiper.scss';
+import 'swiper/components/scrollbar/scrollbar.scss';
 import { AnimatePresence, AnimateSharedLayout } from 'framer-motion';
 import Layout from '../src/components/common/Layout/Layout';
 
