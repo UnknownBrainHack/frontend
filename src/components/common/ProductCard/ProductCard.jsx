@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Background from '../../../images/RussianDragon.png';
 import { ImageWrapper, StyledImage, Rating, Description, LikeWrapper, Card, Title, LikeButton } from './styled';
 import Like from "../../../images/like.svg";
+import {url} from "../../../helpers/url";
 export default function ProductCard({ title, rate, likes, src, alt = '', id }) {
   return (
     <Card className="card-item">
@@ -14,14 +15,14 @@ export default function ProductCard({ title, rate, likes, src, alt = '', id }) {
           {' '}
         </LikeButton>
       </LikeWrapper>
-      <Link href={`/product/${id}`} passHref>
+      <Link href={url(`product/${id}`)} passHref>
         <ImageWrapper>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <StyledImage src={src || Background} alt={alt} />
         </ImageWrapper>
       </Link>
 
-      <Link href={`/product/${id}`} passHref>
+      <Link href={url(`product/${id}`)} passHref>
         <Title>{title}</Title>
       </Link>
       <Rating className="card-item__rating">
