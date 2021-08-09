@@ -34,7 +34,7 @@ Items.getInitialProps = async () => {
   const [products = []] = await Promise.all([
     (async () => {
       const response = await fetch(
-        `${process.env.BASIC_HOST || ''}/tmp/products.json`
+        `${process.env.BASIC_HOST}tmp/products.json`
       );
 
       if (response.ok) {
