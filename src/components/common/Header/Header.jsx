@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useRouter } from 'next/router';
 import * as S from './styled';
 import { Container } from '../../ui/styled';
@@ -16,13 +17,16 @@ export default function Header() {
   return (
     <S.Header>
       <Container>
-        <LogoWrapper>
-          <Image
-            src={'/images/brain-icon.png'}
-            layout="fill"
-            alt="Test Image"
-          />
-        </LogoWrapper>
+        {/* eslint-disable-next-line react/jsx-no-undef */}
+        <Link passHref href="/">
+          <LogoWrapper>
+            <Image
+              src={'/images/brain-icon.png'}
+              layout="fill"
+              alt="Test Image"
+            />
+          </LogoWrapper>
+        </Link>
         <InputField className="header__search" placeholder="Search" />
         <NavItems>
           <NavItem href="/" active={home}>Items</NavItem>
