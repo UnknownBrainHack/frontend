@@ -25,6 +25,8 @@ export const LeftSection = styled.section`
 export const RightSection = styled.section`
   gap: 20px;
   display: flex;
+  overflow: hidden;
+  max-height: 786px;
   flex-direction: column;
   border-left: 2px solid ${LIGHT_GRAY};
   padding-left: 16px;

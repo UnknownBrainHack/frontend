@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import cx from 'classnames';
+import { TabsContainer, TabsWrapper } from "./styled";
 export default function Tabs({ children }) {
   const items = Array.isArray(children) ? children : [children];
   const [selected, setSelected] = useState(0);
 
   return (
-    <div className="tabs">
+    <TabsWrapper className="tabs">
       <div className="tabs__header">
         {items.map((item, i) => (
           <button
@@ -17,11 +18,8 @@ export default function Tabs({ children }) {
           </button>
         ))}
       </div>
-      {items.map((item, i) => (
-        <div key={i}>
-          {selected === i && <div className="tabs__items">{item}</div>}
-        </div>
-      ))}
-    </div>
+      {items.map((item, i) => (selected === i && <TabsContainer className="tabs__items">{item}</TabsContainer>)
+      )}
+    </TabsWrapper>
   );
 }

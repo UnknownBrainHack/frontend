@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useState } from 'react';
-import Tabs from '../../components/ui/Tabs';
+import Tabs from '../../components/ui/Tabs/Tabs';
 import Button from '../../components/ui/Button/Button';
 import ProductList from '../../components/common/ProductList/ProductList';
 import { LeftSection, RightSection } from '../AddItem/styled';
@@ -12,7 +12,7 @@ import {
   Description,
   TopContainer,
   ActionButtons,
-  SubTitle,
+  SubTitle, Experts,
 } from './styled';
 import { Container } from '../../components/ui/styled';
 import InputField from '../../components/ui/InputField/InputField';
@@ -57,7 +57,7 @@ function ProductPage({ products, product }) {
               <div title="Appraisals">
                 <Rates />
               </div>
-              <div title="Experts">
+              <Experts title="Experts">
                 <div className="experts__wrapper">
                   <div className="experts__image">
                     <img src={product.src} alt="" />
@@ -114,17 +114,17 @@ function ProductPage({ products, product }) {
                     </p>
                   </div>
                 </div>
-              </div>
+              </Experts>
             </Tabs>
             <ActionButtons>
               <Button>Buy for 2.525 ETH</Button>
               <Button secondary onClick={() => setOpen(true)}>
-                Appraise Art
+                Appraises Art
               </Button>
             </ActionButtons>
             <Modal
               open={open}
-              title="Appraise Art"
+              title="Appraises Art"
               onClose={() => setOpen(false)}
             >
               <ModalContainer>
@@ -142,7 +142,7 @@ function ProductPage({ products, product }) {
                   ]}
                   value={2}
                 ></Select>
-                <Button onClick={() => setOpen(false)}>Rate ProductPage</Button>
+                <Button onClick={() => setOpen(false)}>Appraises Art</Button>
                 <Button onClick={() => setOpen(false)} simple>
                   Cancel
                 </Button>
@@ -150,7 +150,7 @@ function ProductPage({ products, product }) {
             </Modal>
           </RightSection>
         </TopContainer>
-        <SubTitle>About ProductPage</SubTitle>
+        <SubTitle>This Art</SubTitle>
         <DescriptionWrapper>
           <Description>
             "The Ninth Wave" is one of the most famous paintings by the Russian

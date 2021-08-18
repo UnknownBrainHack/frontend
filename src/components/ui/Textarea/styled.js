@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 import {
   BLUE,
   BORDER_NORMAL, GRAY,
-  GRAY_3,
+  GRAY_3, mobile,
   TRANSITION,
 } from '../../../constants/variables';
 
@@ -51,4 +51,7 @@ export const Label = styled.label`
   display: flex;
   flex-direction: column;
   position: relative;
+  ${mobile}{
+    min-height: 200px;
+  }
 `;

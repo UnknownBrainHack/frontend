@@ -2,6 +2,9 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { BLACK, mobile, tablet } from '../../constants/variables';
 
+export const Experts = styled.div`
+  overflow: hidden;
+`;
 export const ActionButtons = styled.div`
   margin-top: auto;
   display: grid;
