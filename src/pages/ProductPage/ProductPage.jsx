@@ -19,6 +19,7 @@ import InputField from '../../components/ui/InputField/InputField';
 import Select from '../../components/ui/Select/Select';
 import ZoomImage from '../../components/common/ZoomImage/ZoomImage';
 import Rates from '../../components/ui/Chart/Rates';
+import { AnimatePresence } from "framer-motion";
 
 function ProductPage({ products, product }) {
   const [open, setOpen] = useState(false);
@@ -122,32 +123,35 @@ function ProductPage({ products, product }) {
                 Appraises Art
               </Button>
             </ActionButtons>
-            <Modal
-              open={open}
-              title="Appraises Art"
-              onClose={() => setOpen(false)}
-            >
-              <ModalContainer>
-                <InputField
-                  suggestion={'ETH'}
-                  value={state.price}
-                  onChange={handlerPrice}
-                  placeholder={'2.7 ETH'}
-                  title={'Input Potential Price'}
-                />
-                <Select
-                  items={[
-                    { value: 1, label: '1 weeks' },
-                    { value: 2, label: '2 weeks' },
-                  ]}
-                  value={2}
-                ></Select>
-                <Button onClick={() => setOpen(false)}>Appraises Art</Button>
-                <Button onClick={() => setOpen(false)} simple>
+
+            <AnimatePresence>
+              <Modal
+                open={open}
+                title="Appraises Art"
+                onClose={() => setOpen(false)}
+              >
+                <ModalContainer>
+                  <InputField
+                    suggestion={'ETH'}
+                    value={state.price}
+                    onChange={handlerPrice}
+                    placeholder={'2.7 ETH'}
+                    title={'Input Potential Price'}
+                  />
+                  <Select
+                    items={[
+                      { value: 1, label: '1 weeks' },
+                      { value: 2, label: '2 weeks' },
+                    ]}
+                    value={2}
+                  ></Select>
+                  <Button onClick={() => setOpen(false)}>Appraises Art</Button>
+                  <Button onClick={() => setOpen(false)} simple>
                   Cancel
-                </Button>
-              </ModalContainer>
-            </Modal>
+                  </Button>
+                </ModalContainer>
+              </Modal>
+            </AnimatePresence>
           </RightSection>
         </TopContainer>
         <SubTitle>This Art</SubTitle>

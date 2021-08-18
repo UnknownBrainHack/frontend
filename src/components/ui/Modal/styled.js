@@ -23,7 +23,7 @@ export const ModalWrapper = styled.div`
   padding: 32px 64px;
   box-shadow: ${SHADOW_BIG()};
   border-radius: 16px;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%,-50%);
 
   ${mobile}{
     top: unset;
