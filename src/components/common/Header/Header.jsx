@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import * as S from './styled';
@@ -9,6 +9,10 @@ import NavItem from './components/NavItem/NavItem';
 
 export default function Header() {
   const [active, setActive] = useState(false);
+  useEffect(() => {
+    document.body.style.overflow = active?"hidden":"auto";
+  }, [active]);
+
   const router = useRouter();
   const home = router.pathname === '/';
   const addItems = router.pathname === '/add-items';

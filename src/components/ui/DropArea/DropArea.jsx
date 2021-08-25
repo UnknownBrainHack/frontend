@@ -36,7 +36,7 @@ export default function DropArea({ disabled = false, image }) {
             {!uploadedImage && <p>Upload file</p>}
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src={disabled ? image : uploadedImage}
+              src={disabled ? image : uploadedImage && "../../images/Help.svg"}
               placeholder="empty"
               alt=""
               layout="fill"

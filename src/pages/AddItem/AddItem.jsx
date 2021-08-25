@@ -3,6 +3,8 @@ import InputField from '../../components/ui/InputField/InputField';
 import Textarea from '../../components/ui/Textarea/Textarea';
 import Button from '../../components/ui/Button/Button';
 import DropArea from '../../components/ui/DropArea/DropArea';
+import HelpImage from "../../images/file.svg";
+
 import { Container } from '../../components/ui/styled';
 import {
   AddItemWrapper,
