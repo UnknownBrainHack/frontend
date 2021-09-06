@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import BackImage from '../../../../images/backgroundPhoto.jpg';
 import { BLACK, mobile, rgba } from '../../../../constants/variables';
 export const BannerConent = styled.div`
   display: flex;
@@ -16,10 +17,10 @@ export const BannerConent = styled.div`
 export const Banner = styled.section`
   position: relative;
   width: 100%;
-  /*background: url('../../../../images/RussianDragon.png') no-repeat center
-    center;*/
-  background: url('https://picsum.photos/1920/1080') no-repeat center
+  background: url('../../../../images/backgroundPhoto.jpg') no-repeat center
     center;
+  // background: url(${BackImage}) no-repeat center
+  //  center;
   background-size: cover;
   &::before {
     content: '';

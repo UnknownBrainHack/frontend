@@ -3,13 +3,14 @@ import ProductList from "../../components/common/ProductList/ProductList";
 import React from "react";
 import ProductGrid from "../../components/common/ProductGrid/ProductGrid";
 import ProfileCard from "../../components/common/ProfileCard/ProfileCard";
+import {Description} from "./styled";
 
 function ProfilePage({products}) {
   return (
     <Container>
       <div className="row">
         <ProfileCard />
-        <div>
+        <Description>
           <h6>About me</h6>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
              - Cum, enim. Suscipit, numquam error. <br /><br />
@@ -17,7 +18,7 @@ function ProfilePage({products}) {
         Ullam quam repellendus, nisi velit assumenda non deleniti. <br />
         - Porro odio, neque impedit, maxime a quas ipsa esse odit, vitae recusandae doloribus error tenetur nostrum ipsum quasi architecto dignissimos est id!
         Dicta, animi quia, eveniet quasi neque, minus nulla laboriosam doloribus placeat ipsum quibusdam odio id aliquid consequuntur! Hic, maxime vel fugiat libero iusto aliquam modi sit, ipsa rerum quia minima!</p>
-        </div>
+        </Description>
       </div>
       <ProductList
         title="My arts"

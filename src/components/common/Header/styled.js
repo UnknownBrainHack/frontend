@@ -19,7 +19,6 @@ export const LogoWrapper = styled.a`
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  opacity: 0.5;
 `;
 export const MobileWrarrer = styled.div`
   background-color: ${WHITE};

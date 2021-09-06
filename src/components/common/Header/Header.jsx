@@ -23,7 +23,7 @@ export default function Header() {
         <LogoWrapper>
           <NavItem href="/">
             <Image
-              src={'/images/brain-icon.png'}
+              src={'/images/Black png.png'}
               layout="fill"
               alt="Test Image"
             />
