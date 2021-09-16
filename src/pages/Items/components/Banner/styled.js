@@ -23,7 +23,7 @@ export const Banner = styled.section`
   //  center;
   background-size: cover;
   &::before {
-    content: '';
+    content: unset;
     height: 100%;
     width: 100%;
     position: absolute;

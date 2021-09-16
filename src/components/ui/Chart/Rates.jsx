@@ -3,11 +3,11 @@ import { Bar } from 'react-chartjs-2';
 
 export default function Rates() {
   const data = {
-    labels: [1, 2, 3, 4, 5, 6, 7, 8],
+    labels: [1, 2, 3, 4, 5, 6, 7, 8,9,10,11,12,13,14,15],
     datasets: [
       {
         label: '≈ ETH',
-        data: [65, 59, 80, 81, 56, 55, 40,32],
+        data: [65, 59, 80, 81, 56, 55, 40,32,55, 40,32,55, 40,32],
         backgroundColor: '#E9F2FF',
         borderRadius: 8,
         hoverBackgroundColor: '#0166FF',

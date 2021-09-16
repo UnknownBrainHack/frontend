@@ -5,7 +5,7 @@ const Banner = () => (
   <S.Banner>
     <Container>
       <S.BannerConent>
-        <h1>Unknown Brain</h1>
+        <h1 />
       </S.BannerConent>
     </Container>
   </S.Banner>
