@@ -9,6 +9,7 @@ export const BaseImage = styled.img`
   height: 100%;
   width: 100%;
   object-fit: cover;
+  max-height: 100%;
 `;
 
 export const ZoomedImage = styled.div`

@@ -21,6 +21,7 @@ export const AddItemWrapper = styled(motion.section)`
 export const LeftSection = styled.section`
   position: relative;
   max-height: 786px;
+  overflow: hidden;
 `;
 export const RightSection = styled.section`
   gap: 20px;
