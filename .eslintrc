@@ -1,0 +1,36 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "next",
+    "next/core-web-vitals",
+    "plugin:prettier/recommended",
+    "plugin:react/recommended"
+  ],
+  "rules": {
+    "array-bracket-newline": "warn",
+    "arrow-body-style": "off",
+    "camelcase": "error",
+    "prefer-destructuring": "error",
+    "jsx-quotes": "warn",
+    "no-var": "error",
+    "semi": "error",
+    "indent": ["error", 2],
+    "no-multi-spaces": "error",
+    "space-in-parens": "error",
+    "no-multiple-empty-lines": "error",
+    "prefer-const": "error",
+    "no-use-before-define": "error",
+    "react-in-jsx-scope": "off",
+    "react/no-unescaped-entities": "off",
+    "@next/next/no-page-custom-font": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/prop-types": "off",
+    "linebreak-style": "off",
+    "prettier/prettier": "off",
+    "no-undef": "off"
+  }
+}

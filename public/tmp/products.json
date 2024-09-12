@@ -1,0 +1,69 @@
+[
+  {
+    "id": 2,
+    "src": "https://images.unsplash.com/photo-1593642633279-1796119d5482?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+    "title": "Пример названия карточки где больше пяти слов",
+    "rate": 0.14,
+    "likes": 121
+  },{
+    "id": 3,
+    "src": "https://images.unsplash.com/photo-1593642633279-1796119d5482?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+    "title": "Пример названия карточки где больше пяти слов",
+    "rate": 0.04,
+    "likes": 321
+  },{
+    "id": 4,
+    "src": "https://images.unsplash.com/photo-1625519469785-daedecdc6b92?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+    "title": "Ещё один продукт",
+    "rate": 0.1,
+    "likes": 32
+  },{
+    "id": 5,
+    "src": "https://images.unsplash.com/photo-1625519469785-daedecdc6b92?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+    "title": "Ещё один продукт",
+    "rate": 4.34,
+    "likes": 64
+  },{
+    "id": 6,
+    "src": "https://images.unsplash.com/photo-1625511626778-0b879ced54f6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+    "title": "Продукт номер миллион",
+    "rate": 2.34,
+    "likes": 11
+  },{
+    "id": 7,
+    "src": "https://images.unsplash.com/photo-1593642633279-1796119d5482?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+    "title": "1",
+    "rate": 0.344,
+    "likes": 88
+  },{
+    "id": 8,
+    "src": "https://images.unsplash.com/photo-1593642633279-1796119d5482?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+    "title": "1",
+    "rate": 0.134,
+    "likes": 756
+  },{
+    "id": 9,
+    "src": "https://images.unsplash.com/photo-1593642633279-1796119d5482?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+    "title": "Эпопея",
+    "rate": 0.34,
+    "likes": 1
+  },{
+    "id": 10,
+    "src": "https://images.unsplash.com/photo-1625507951734-8268799286e9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
+    "title": "Новый продукт",
+    "rate": 0.934,
+    "likes": 0
+  },{
+    "id": 11,
+    "src": "https://images.unsplash.com/photo-1625507951734-8268799286e9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
+    "title": "Новый продукт",
+    "rate": 0.634,
+    "likes": 12
+  },{
+    "id": 12,
+    "src": "https://images.unsplash.com/photo-1625535726342-e40cfc7a71d3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
+    "title": "Главный продукт",
+    "rate": 0.124,
+    "likes": 64
+  }
+]
